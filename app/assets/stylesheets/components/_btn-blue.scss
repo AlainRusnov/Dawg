@@ -1,0 +1,19 @@
+.btn-blue {
+  background-color: #04f7e3;
+  color:#fc3adc;
+  padding: 8px 16px;
+  border: 3px dashed #fc3adc;
+  border-radius: 16px;
+  font-weight: bold;
+  transition: background .3s;
+  margin: 24px;
+  font-family: Coustard;
+  display: block;
+}
+
+.btn-blue:hover {
+  background-color: #fc3adc;
+  color: #04f7e3;
+  border: 3px dashed #04f7e3;
+  text-decoration: none;
+}
