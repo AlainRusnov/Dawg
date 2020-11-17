@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require "faker"
+
+#Need to assign user_id when seeding
+10.times do
+  dog = Dog.create(
+    name: Faker::Creature::Dog.name,
+    breed: Faker::Creature::Dog.breed,
+    description: Faker::Creature::Dog.meme_phrase
+  )
+end

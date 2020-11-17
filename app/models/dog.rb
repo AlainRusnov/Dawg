@@ -3,7 +3,7 @@ class Dog < ApplicationRecord
   belongs_to :user
 
   # HAS MANY USERS THROUGH BOOKINGS ??? // Dont think so but asking in case
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 
   validates :name, presence: true
   validates :breed, presence: true

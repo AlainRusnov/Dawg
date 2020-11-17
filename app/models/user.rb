@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
 
   has_many :bookings, dependent: :destroy
-  has_many :dogs, through: :bookings   # Destroy method ???
+  has_many :dogs, dependent: :destroy
 
 
   # ADD THESE LATER

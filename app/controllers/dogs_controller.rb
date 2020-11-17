@@ -11,6 +11,7 @@ class DogsController < ApplicationController
 
   def new
     @dog = Dog.new
+    @dog.user = current_user
   end
 
   def create

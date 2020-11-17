@@ -3,7 +3,7 @@ class Booking < ApplicationRecord
   belongs_to :dog
 
   validates :description, presence: true
-  validates :user, presence: true, uniqueness: { scope: :dog }
+  validates :user, presence: true
   validates :dog, presence: true
   validates :status, presence: true
 end
