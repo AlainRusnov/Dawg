@@ -1,0 +1,78 @@
+// SCSS for search (index) page
+.container {
+  display: flex;
+}
+
+.cards {
+  flex: 50%;
+}
+
+.card {
+  display: flex;
+  background-color: white;
+  height: 125px;
+  width: 100%;
+
+  img {
+    width: 100px;
+    height: 100%;
+  }
+
+}
+
+.link-dog-name a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.link-dog-name a:hover {
+  text-decoration: none;
+  color: $dope-aqua;
+
+}
+
+.map {
+  flex: 50%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+
+
+  img {
+    width: 100%;
+  }
+}
+
+/*Media Queries*/
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
+}
+

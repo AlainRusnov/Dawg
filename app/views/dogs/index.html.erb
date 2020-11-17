@@ -1,1 +1,21 @@
-<h1>DOGS INDEX PAGE</h1>
+<div class="container">
+  <div class="cards">
+    <% @dogs.each do |dog| %>
+
+    <div class="card">
+      <div class="img-search-dog">
+        <%= image_tag "dog-skateboard-how-to-train-guide.jpg", class: "img-dog" %>
+      </div>
+      <div class="link-dog-name">
+        <%= link_to dog.name, dog_path(dog) %>
+      </div>
+    </div>
+
+    <% end %>
+  </div>
+
+  <div class="map">
+    <%= image_tag "map-placeholder.png" %>
+  </div>
+
+</div>
