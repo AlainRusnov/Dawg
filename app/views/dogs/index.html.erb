@@ -1,4 +1,8 @@
+
+
+<h1 style="font-family:'Fredoka One', cursive; font-size: 35px;">Find a Pal</h1>
 <div class="container">
+
   <div class="cards">
     <% @dogs.each do |dog| %>
 
@@ -7,7 +11,11 @@
         <%= image_tag "dog-skateboard-how-to-train-guide.jpg", class: "img-dog" %>
       </div>
       <div class="dog-info">
-        <%= link_to dog.name, dog_path(dog) %>
+        <div class="center-v">
+          <h1 id="dog-name"><%= link_to dog.name, dog_path(dog) %></h1>
+          <h2 id="dog-breed"><%= dog.breed %></h2>
+          <p id="dog-description"><%= dog.description %></p>
+        </div>
       </div>
     </div>
 

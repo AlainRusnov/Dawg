@@ -1,32 +1,49 @@
 // SCSS for search (index) page
+
+.center-v {
+  vertical-align: center;
+}
+
 .container {
   display: flex;
+  height: 100vh;
 }
 
 .cards {
   flex: 50%;
-  height: 100vh;
+  height: 100%;
+  top: 0;
 }
 
 .card {
   display: flex;
   flex-direction: initial;
+  flex-grow: 1;
   background-color: white;
   height: 125px;
   width: 100%;
   border-radius: 3px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 
   img {
-    width: 100px;
+    width: 175px;
     height: 100%;
     border-radius: 3px 3px 0 0;
+    object-fit: cover;
   }
+
+}
+
+.dog-info {
+  margin-left: 20px;
 
 }
 
 .dog-info a {
   text-decoration: none;
   color: black;
+
 
 }
 
@@ -38,6 +55,7 @@
 
 .map {
   flex: 50%;
+  flex-grow: 1;
   height: 100vh;
   position: sticky;
   top: 0;
@@ -47,7 +65,21 @@
     width: 100%;
     height: 100%;
     border-radius: 3px;
+    object-fit: cover;
   }
+}
+
+#dog-name {
+  font-size: 22px;
+}
+
+#dog-breed {
+  font-size: 17px;
+
+}
+
+#dog-description {
+  font-size: 17px;
 }
 
 /*Media Queries*/
