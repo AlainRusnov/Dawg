@@ -1,5 +1,6 @@
 
 <div class="main">
+  <div>
   <h1 id="search-header" style="font-family:'Fredoka One', cursive; font-size: 50px;">Find a Pal</h1>
   <h2 style="font-family:'Fredoka One', cursive; font-size: 30px;">Filter by size</h2>
   <ul class="dog-size list-inline">
@@ -7,6 +8,7 @@
     <li><%= image_tag "noun_Dog_151250.png", height: 75, width: 75 %></li>
     <li><%= image_tag "noun_Dog_3601134.png", height: 75, width: 75 %></li>
   </ul>
+  </div>
   <div class="container">
 
     <div class="cards">
@@ -18,9 +20,9 @@
         </div>
         <div class="dog-info">
           <div class="center-v">
-            <h1 id="dog-name"><%= link_to dog.name, dog_path(dog) %></h1>
+            <h1 id="dog-name"><%= dog.name %></h1>
             <h2 id="dog-breed"><%= dog.breed %></h2>
-            <p id="dog-description"><%= dog.description %></p>
+            <!-- <p id="dog-description"><%= dog.description %></p> -->
           </div>
         </div>
         <div id="see-more" class="btn-blue">
@@ -35,6 +37,5 @@
       <%= image_tag "map-placeholder.png" %>
   <!--     <%= image_tag "https://api.mapbox.com/[...]?access_token=pk.eyJ1IjoibGF5bmVyam9obnNvbiIsImEiOiJja2d3bHhtazgwNTlzMzRueDV0YXR0ZHZmIn0.G9YO9eAG9LrvdkyFByHx9w" %> -->
     </div>
-
   </div>
 </div>

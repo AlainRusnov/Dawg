@@ -19,33 +19,39 @@
   display: flex;
   flex-direction: initial;
   justify-content: space-between;
+  align-items: center;
   flex-grow: 1;
   background-color: white;
-  height: 125px;
+  height: 150px;
   width: 100%;
   border-radius: 3px;
   margin-bottom: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 
   img {
-    width: 175px;
+    width: 220px;
     height: 100%;
-    border-radius: 3px 3px 0 0;
+    border-radius: 3px 0px 0px 3px;
     object-fit: cover;
   }
 
 }
 
+.card:hover {
+  animation: slide 2s ease-in-out .5s infinite alternate;
+}
+
 .dog-info {
   margin-left: 20px;
   width: 20%;
+  position: relative;
+  left: -13px;
 
 }
 
 .dog-info a {
   text-decoration: none;
   color: black;
-
 
 }
 
@@ -95,7 +101,9 @@
 
 #see-more {
   height: 60px;
-  align-self: flex-end;
+  text-align: center;
+  position: relative;
+  right: 15px;
 }
 
 
