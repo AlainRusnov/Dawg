@@ -1,5 +1,9 @@
 // SCSS for search (index) page
 
+.center {
+  text-align: center;
+}
+
 .center-v {
   vertical-align: center;
 }
@@ -7,12 +11,15 @@
 .container {
   display: flex;
   height: 100vh;
+  width: auto;
 }
 
 .cards {
   flex: 50%;
   height: 100%;
   top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .card {
@@ -37,8 +44,14 @@
 
 }
 
-.card:hover {
-  animation: slide 2s ease-in-out .5s infinite alternate;
+.flex {
+  display: flex;
+}
+
+.icon-size:hover {
+  background-color: white;
+  box-shadow: 8px 8px #FE0CF4;
+  border: 3px solid #0EFFE2;
 }
 
 .dog-info {
@@ -76,8 +89,18 @@
   }
 }
 
-.list-inline > li {
+.dog-size > li {
   display: inline;
+}
+
+.filter-search {
+  margin-left: 165px;
+  margin-bottom: 25px;
+}
+
+.footer {
+  height: 200px;
+  width: 100%;
 }
 
 #search-header {
@@ -88,6 +111,7 @@
 
 #dog-name {
   font-size: 22px;
+  font-weight: bold;
 }
 
 #dog-breed {
@@ -100,10 +124,13 @@
 }
 
 #see-more {
-  height: 60px;
-  text-align: center;
+  height: 50px;
   position: relative;
   right: 15px;
+}
+
+#see-more a {
+  text-align: center;
 }
 
 
