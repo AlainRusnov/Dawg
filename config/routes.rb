@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   # put destroy outside of nested loop -> because ends up being dogs/dog_id/bookings/:id and not /bookings/:id
 
   # delete user but also dog destroy should be only by user id stored to dog ?
-  resources :users, only: :destroy
+  # resources :users, only: :destroy ## If user id == dog.user_id THEN allow delete ?
 
 end

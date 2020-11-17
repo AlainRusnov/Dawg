@@ -1,6 +1,7 @@
 
 
 <h1 style="font-family:'Fredoka One', cursive; font-size: 35px;">Find a Pal</h1>
+
 <div class="container">
 
   <div class="cards">
@@ -17,13 +18,17 @@
           <p id="dog-description"><%= dog.description %></p>
         </div>
       </div>
+      <div class="btn-blue">
+        <%= link_to "See More", dog_path(dog) %>
+      </div>
     </div>
 
     <% end %>
   </div>
 
   <div class="map">
-    <%= image_tag "map-placeholder.png" %>
+<!--     <%= image_tag "map-placeholder.png" %> -->
+    <%= image_tag "https://api.mapbox.com/[...]?access_token=pk.eyJ1IjoibGF5bmVyam9obnNvbiIsImEiOiJja2d3bHhtazgwNTlzMzRueDV0YXR0ZHZmIn0.G9YO9eAG9LrvdkyFByHx9w" %>
   </div>
 
 </div>

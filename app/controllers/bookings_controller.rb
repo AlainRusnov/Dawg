@@ -1,8 +1,10 @@
 class BookingsController < ApplicationController
   before_action :set_dog, only:[:new, :create]
 
-  def show
-    @bookings = User.bookings.all ## NEED TO SUS THIS OUT
+  def index
+    @owner_bookings = current_user.owner_bookings
+    @renter_bookings = current_user.renter_bookings
+    ##
   end
 
   def new
@@ -10,7 +12,8 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.create(booking_params)
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
     @booking.dog = @dog
     if @booking.save
       redirect_to dog_path(@dog)
@@ -23,7 +26,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @dog = @booking.dog
     @booking.destroy
-    redirect_to cocktail_path(@dog)
+    redirect_to dog_path(@dog)
   end
 
   private
@@ -33,8 +36,7 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:description, :status, :user_id, :dog_id)
+    params.require(:booking).permit(:description) ## user_id/dog_id or user/dog ?
   end
 end
 
-end
