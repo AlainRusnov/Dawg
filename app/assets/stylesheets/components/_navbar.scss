@@ -21,10 +21,14 @@
     // font-family: 'Mitr', sans-serif;
     // font-family: 'Pacifico', cursive;
     // font-family: 'Viga', sans-serif;
-    font-size: 21px;
+    font-size: 22px;
     position: relative;
     left: 63px;
     top: 8px;
+}
+
+.logo-name:hover {
+  color: rgb(254, 4, 189);
 }
 
 // .navbar-nav-dawg li {
@@ -51,7 +55,16 @@
   top: 5px;
 }
 
-.nav-link a {
+.nav-link a:hover {
   padding-right: 50px;
 
+
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: black;
+}
+
+.navbar-light .navbar-nav .active > .nav-link:hover {
+  color: rgb(254, 4, 189);
 }
