@@ -3,7 +3,8 @@ class DogsController < ApplicationController
   before_action :set_dog, only:[:show, :destroy]
 
   def index
-  @dogs = Dog.all
+    @dogs = Dog.all
+    @dogs = policy_scope(Dog)
   end
 
   def show
@@ -11,11 +12,13 @@ class DogsController < ApplicationController
 
   def new
     @dog = Dog.new
+    authorize @dog
   end
 
   def create
     @dog = Dog.new(dog_params)
     @dog.user = current_user ## use current_user like this ?
+    authorize @dog
     if @dog.save
       redirect_to dog_path(@dog)
     else
@@ -32,6 +35,7 @@ class DogsController < ApplicationController
 
   def set_dog
     @dog = Dog.find(params[:id])
+    authorize @dog
   end
 
   def dog_params
