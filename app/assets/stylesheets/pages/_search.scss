@@ -41,7 +41,6 @@
     border-radius: 3px 0px 0px 3px;
     object-fit: cover;
   }
-
 }
 
 .flex {
@@ -89,9 +88,14 @@
   }
 }
 
-.dog-size > li {
+.dog-size {
   display: inline;
+  list-style-type: none;
 }
+
+// .dog-size > li {
+//   display: inline;
+// }
 
 .filter-search {
   margin-left: 165px;
@@ -165,4 +169,3 @@
     display: block;
   }
 }
-
