@@ -1,34 +1,40 @@
 
+<div class="main">
+  <h1 id="search-header" style="font-family:'Fredoka One', cursive; font-size: 50px;">Find a Pal</h1>
+  <h2 style="font-family:'Fredoka One', cursive; font-size: 30px;">Filter by size</h2>
+  <ul class="dog-size list-inline">
+    <li><%= image_tag "noun_Dog_204896.png", height: 75, width: 75 %></li>
+    <li><%= image_tag "noun_Dog_151250.png", height: 75, width: 75 %></li>
+    <li><%= image_tag "noun_Dog_3601134.png", height: 75, width: 75 %></li>
+  </ul>
+  <div class="container">
 
-<h1 style="font-family:'Fredoka One', cursive; font-size: 35px;">Find a Pal</h1>
+    <div class="cards">
+      <% @dogs.each do |dog| %>
 
-<div class="container">
-
-  <div class="cards">
-    <% @dogs.each do |dog| %>
-
-    <div class="card">
-      <div class="img-search-dog">
-        <%= image_tag "dog-skateboard-how-to-train-guide.jpg", class: "img-dog" %>
-      </div>
-      <div class="dog-info">
-        <div class="center-v">
-          <h1 id="dog-name"><%= link_to dog.name, dog_path(dog) %></h1>
-          <h2 id="dog-breed"><%= dog.breed %></h2>
-          <p id="dog-description"><%= dog.description %></p>
+      <div class="card">
+        <div class="img-search-dog">
+          <%= image_tag "dog-skateboard-how-to-train-guide.jpg", class: "img-dog" %>
+        </div>
+        <div class="dog-info">
+          <div class="center-v">
+            <h1 id="dog-name"><%= link_to dog.name, dog_path(dog) %></h1>
+            <h2 id="dog-breed"><%= dog.breed %></h2>
+            <p id="dog-description"><%= dog.description %></p>
+          </div>
+        </div>
+        <div id="see-more" class="btn-blue">
+          <%= link_to "See More", dog_path(dog) %>
         </div>
       </div>
-      <div class="btn-blue">
-        <%= link_to "See More", dog_path(dog) %>
-      </div>
+
+      <% end %>
     </div>
 
-    <% end %>
-  </div>
+    <div class="map">
+      <%= image_tag "map-placeholder.png" %>
+  <!--     <%= image_tag "https://api.mapbox.com/[...]?access_token=pk.eyJ1IjoibGF5bmVyam9obnNvbiIsImEiOiJja2d3bHhtazgwNTlzMzRueDV0YXR0ZHZmIn0.G9YO9eAG9LrvdkyFByHx9w" %> -->
+    </div>
 
-  <div class="map">
-<!--     <%= image_tag "map-placeholder.png" %> -->
-    <%= image_tag "https://api.mapbox.com/[...]?access_token=pk.eyJ1IjoibGF5bmVyam9obnNvbiIsImEiOiJja2d3bHhtazgwNTlzMzRueDV0YXR0ZHZmIn0.G9YO9eAG9LrvdkyFByHx9w" %>
   </div>
-
 </div>
