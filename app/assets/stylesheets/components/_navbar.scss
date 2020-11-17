@@ -1,12 +1,83 @@
+.no-bmargin {
+  margin-bottom: 0px;
+}
+
+.search-form-control {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+}
+
+.form-control {
+  width: 300px;
+  border-radius: 5px;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-icon img {
+  width: 75px;
+  height: auto;
+}
+
+.dawg-logo-icon {
+  position: absolute;
+  top: -7px;
+}
+
+.logo-name {
+    font-family: 'Fredoka One', cursive;
+    // font-family: 'Mitr', sans-serif;
+    // font-family: 'Pacifico', cursive;
+    // font-family: 'Viga', sans-serif;
+    font-size: 22px;
+    position: relative;
+    left: 64px;
+    top: 8px;
+}
+
+.logo-name:hover {
+  color: rgb(15, 255, 225);
+}
+
+// .navbar-nav-dawg li {
+//   padding-right: 0px;
+// }
+
+.avatar-user {
+  width: 50px;
+  height: auto;
+  padding: 0px;
+
+}
+
+.avatar-carrot {
+  width: 35px;
+  height: auto;
+  padding: 0px;
+  // position: relative;
+  right: 15px;
+}
+
+.nav-link {
+  position: relative;
+  top: 5px;
+}
+
+.nav-link a:hover {
+  padding-right: 50px;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: black;
+}
+
+.navbar-light .navbar-nav .active > .nav-link:hover {
+  color: rgb(254, 4, 189);
 }
