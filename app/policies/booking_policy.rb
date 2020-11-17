@@ -1,14 +1,11 @@
-class DogPolicy < ApplicationPolicy
+class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      scope.where(user: user)
     end
   end
-  def create?
-    true
-  end
 
-  def show?
+  def create?
     true
   end
 

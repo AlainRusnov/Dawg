@@ -9,12 +9,14 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @booking = policy_scope(Booking)
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.dog = @dog
+    authorize @booking
     if @booking.save
       redirect_to dog_path(@dog)
     else
