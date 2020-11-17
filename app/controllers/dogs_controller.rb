@@ -35,7 +35,7 @@ class DogsController < ApplicationController
   end
 
   def dog_params
-    params.require(:dog).permit(:name, :breed, :description, :user_id) ## double check if user or user_id ?
+    params.require(:dog).permit(:name, :breed, :description) ## double check if user or user_id ?
   end
 
 end
