@@ -9,10 +9,16 @@
 require "faker"
 
 #Need to assign user_id when seeding
+adam = User.create(
+  email: "imitalian@email.com",
+  password: "123456"
+)
+
 10.times do
   dog = Dog.create(
     name: Faker::Creature::Dog.name,
     breed: Faker::Creature::Dog.breed,
-    description: Faker::Creature::Dog.meme_phrase
+    description: Faker::Creature::Dog.meme_phrase,
+    user: adam
   )
 end
