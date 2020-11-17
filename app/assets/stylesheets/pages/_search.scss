@@ -5,28 +5,32 @@
 
 .cards {
   flex: 50%;
+  height: 100vh;
 }
 
 .card {
   display: flex;
+  flex-direction: initial;
   background-color: white;
   height: 125px;
   width: 100%;
+  border-radius: 3px;
 
   img {
     width: 100px;
     height: 100%;
+    border-radius: 3px 3px 0 0;
   }
 
 }
 
-.link-dog-name a {
+.dog-info a {
   text-decoration: none;
   color: black;
 
 }
 
-.link-dog-name a:hover {
+.dog-info a:hover {
   text-decoration: none;
   color: $dope-aqua;
 
@@ -41,6 +45,8 @@
 
   img {
     width: 100%;
+    height: 100%;
+    border-radius: 3px;
   }
 }
 
