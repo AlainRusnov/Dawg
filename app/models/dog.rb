@@ -1,6 +1,7 @@
 class Dog < ApplicationRecord
   # Has unique user_id assigned from creation but what about all the rental Users ?
   belongs_to :user
+  has_one_attached :photo
 
   # HAS MANY USERS THROUGH BOOKINGS ??? // Dont think so but asking in case
   has_many :bookings, dependent: :destroy
