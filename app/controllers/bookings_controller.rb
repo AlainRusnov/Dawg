@@ -2,8 +2,8 @@ class BookingsController < ApplicationController
   before_action :set_dog, only:[:new, :create]
 
   def index
-    @owner_bookings = current_user.dogs.map {|dog| dog.bookings}.flatten ## NEED TO SUS THIS OUT
-    @renter_bookings = current_user.bookings ## NO INDEX PAGE FOR ALL BOOKINGS ONLY SHOW
+    @owner_bookings = current_user.owner_bookings
+    @renter_bookings = current_user.renter_bookings
     ##
   end
 
@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.dog = @dog ## works ??
+    @booking.dog = @dog
     if @booking.save
       redirect_to dog_path(@dog)
     else
