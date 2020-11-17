@@ -1,13 +1,32 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="dawg-logo-icon">
-  <%= link_to "#", class: "navbar-icon" do %>
-    <%= image_tag "noun_puppy sunglasses_2018663.png" %>
-  <% end %>
+  <div>
+    <div class="dawg-logo-icon">
+    <%= link_to "#", class: "navbar-icon" do %>
+      <%= image_tag "noun_puppy sunglasses_2018663.png" %>
+    <% end %>
+    </div>
+
+    <div>
+      <h1 class="logo-name">DAWG</h1>
+    </div>
   </div>
 
-  <div>
-    <h1 class="logo-name">DAWG</h1>
+
+
+  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="search-form-control form-group no-bmargin">
+    <div>
+      <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    </div>
+    <div>
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i> Search
+    </button>
+    </div>
   </div>
+<% end %>
+
+
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

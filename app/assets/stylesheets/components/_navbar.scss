@@ -1,6 +1,20 @@
+.no-bmargin {
+  margin-bottom: 0px;
+}
+
+.search-form-control {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+}
+
+.form-control {
+  width: 300px;
+  border-radius: 5px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,12 +22,13 @@
 }
 
 .navbar-icon img {
-  width: 65px;
+  width: 75px;
   height: auto;
 }
 
 .dawg-logo-icon {
   position: absolute;
+  top: -7px;
 }
 
 .logo-name {
@@ -28,7 +43,7 @@
 }
 
 .logo-name:hover {
-  color: rgb(254, 4, 189);
+  color: rgb(15, 255, 225);
 }
 
 // .navbar-nav-dawg li {
@@ -46,7 +61,7 @@
   width: 35px;
   height: auto;
   padding: 0px;
-  position: relative;
+  // position: relative;
   right: 15px;
 }
 
@@ -57,8 +72,6 @@
 
 .nav-link a:hover {
   padding-right: 50px;
-
-
 }
 
 .navbar-light .navbar-nav .active > .nav-link {
