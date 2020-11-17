@@ -4,6 +4,7 @@ class Dog < ApplicationRecord
 
   # HAS MANY USERS THROUGH BOOKINGS ??? // Dont think so but asking in case
   has_many :bookings, dependent: :destroy
+  # has_many :users, through: :bookings
 
   validates :name, presence: true
   validates :breed, presence: true

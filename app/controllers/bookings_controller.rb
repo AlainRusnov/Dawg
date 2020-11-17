@@ -3,15 +3,19 @@ class BookingsController < ApplicationController
 
   def show
     @bookings = User.bookings.all ## NEED TO SUS THIS OUT
+    ## NO INDEX PAGE FOR ALL BOOKINGS ONLY SHOW
+    ##
   end
 
   def new
     @booking = Booking.new
+    @booking.user = current_user
   end
 
   def create
-    @booking = Booking.create(booking_params)
-    @booking.dog = @dog
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.dog = @dog ## works ??
     if @booking.save
       redirect_to dog_path(@dog)
     else
@@ -33,8 +37,7 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:description, :status, :user_id, :dog_id)
+    params.require(:booking).permit(:description, :status, :user_id, :dog_id) ## user_id/dog_id or user/dog ?
   end
 end
 
-end

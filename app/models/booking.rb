@@ -5,5 +5,4 @@ class Booking < ApplicationRecord
   validates :description, presence: true
   validates :user, presence: true
   validates :dog, presence: true
-  validates :status, presence: true
 end
