@@ -1,15 +1,14 @@
 class BookingsController < ApplicationController
   before_action :set_dog, only:[:new, :create]
 
-  def show
-    @bookings = User.bookings.all ## NEED TO SUS THIS OUT
-    ## NO INDEX PAGE FOR ALL BOOKINGS ONLY SHOW
+  def index
+    @owner_bookings = current_user.dogs.map {|dog| dog.bookings}.flatten ## NEED TO SUS THIS OUT
+    @renter_bookings = current_user.bookings ## NO INDEX PAGE FOR ALL BOOKINGS ONLY SHOW
     ##
   end
 
   def new
     @booking = Booking.new
-    @booking.user = current_user
   end
 
   def create
@@ -27,7 +26,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @dog = @booking.dog
     @booking.destroy
-    redirect_to cocktail_path(@dog)
+    redirect_to dog_path(@dog)
   end
 
   private
@@ -37,7 +36,7 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:description, :status, :user_id, :dog_id) ## user_id/dog_id or user/dog ?
+    params.require(:booking).permit(:description) ## user_id/dog_id or user/dog ?
   end
 end
 
