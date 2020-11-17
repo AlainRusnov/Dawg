@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :dogs do
-    resources :bookings, only: [:new, :create, :show, :index, :edit, :update] # edit/update only on status ?
+    resources :bookings, only: [:new, :create, :show, :edit, :update] # edit/update only on status ?
   end
-  resources :bookings, only: :destroy
+  resources :bookings, only:[:destroy,:index]
   # put destroy outside of nested loop -> because ends up being dogs/dog_id/bookings/:id and not /bookings/:id
 
   # delete user but also dog destroy should be only by user id stored to dog ?
