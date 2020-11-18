@@ -1,12 +1,14 @@
 h1  {
   font-family: 'Fredoka One', cursive;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .welcome {
 }
 
 .container {
-  display: flex;
+  margin: 0;
 }
 
 .pending-requests {
@@ -17,13 +19,26 @@ h1  {
 }
 
 .my-dogs {
-  border: 3px dashed $trippy-pink;
-  height: 700px;
-  width: 50%;
   margin-left: 10px;
+  margin-bottom: 20px;
+  // border: 3px dashed $trippy-pink;
 
+  // background-color: #f4f4f4;
+  // box-shadow: 8px 8px #FE0CF4;
+  // border: 3px solid #0EFFE2;
+}
+
+.dog {
   background-color: white;
+  height: 250px;
+  width: 250px;
+  border-radius: 3px;
+  margin: auto;
+  margin: 10px;
+
+  background-color: #f4f4f4;
   box-shadow: 8px 8px #FE0CF4;
   border: 3px solid #0EFFE2;
+
 }
 
