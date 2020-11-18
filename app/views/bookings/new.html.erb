@@ -1,1 +1,14 @@
-<h1>Bookings NEW page</h1>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<div class="booking-new">
+  <div class= "container">
+    <%= simple_form_for (@booking) do |f| %>
+      <%= f.input :description %>
+      <%= f.submit item_label_class: 'btn-blue' %>
+    <% end %>
+  </div>
+</div>
+
