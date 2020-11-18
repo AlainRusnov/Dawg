@@ -1,0 +1,84 @@
+h1  {
+  font-family: 'Fredoka One', cursive;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.center {
+  text-align: center;
+}
+
+.welcome {
+}
+
+.container {
+  margin: 0;
+}
+
+.pending-requests {
+  border: 3px dashed $trippy-pink;
+  height: 700px;
+  width: 70%;
+  margin-right: 10px;
+  overflow: scroll;
+}
+
+.my-dogs {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  height: 700px;
+  overflow: scroll;
+  // border: 3px dashed $trippy-pink;
+
+  // background-color: #f4f4f4;
+  // box-shadow: 8px 8px #FE0CF4;
+  // border: 3px solid #0EFFE2;
+}
+
+.dog {
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  border-radius: 3px;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 25px;
+
+
+  background-color: #f4f4f4;
+  box-shadow: 8px 8px #FE0CF4;
+  border: 3px solid #0EFFE2;
+
+}
+
+.dog img {
+  object-fit: cover;
+  height: 170px;
+  width: 100%;
+}
+
+.dog-name:hover {
+  color: #FE0CF4;
+
+}
+
+.dog-breed:hover {
+  color: #0EFFE2;
+}
+
+.request {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.dog-image {
+  height: 100px;
+  width: 100px;
+  background-color: #0EFFE2;
+  border: 3px dashed #FE0CF4;
+}
