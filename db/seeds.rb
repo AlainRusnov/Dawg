@@ -15,7 +15,10 @@ puts "repopulating..."
 adam = User.create(
   email: "imitalian@email.com",
   password: "123456"
+  name: "Adam"
+  address: "5333 casgrain Montreal Quebec"
 )
+
 
 10.times do
   dog = Dog.create(
