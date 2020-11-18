@@ -1,0 +1,29 @@
+.booking-new {
+
+  #new_booking {
+  width: 100%;
+  }
+
+  textarea.form-control {
+    height: 150px;
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px dashed #0EFFE2;
+    resize: none;
+    color: #FE0CF4;
+  }
+
+  textarea.form-control:focus {
+    border: 3px solid #0EFFE2;
+    box-shadow: 8px 8px #FE0CF4;
+  }
+
+  h2 {
+      color: #FE0CF4;
+      font-family: Coustard;
+      font-style: normal;
+      font-weight: 900;
+      text-shadow: 4px 4px 0px #0EFFE2;
+  }
+}
