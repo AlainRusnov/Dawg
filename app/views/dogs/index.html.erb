@@ -54,11 +54,10 @@
       <% end %>
     </div>
 
-    <div class="map">
-      <%= image_tag "map-placeholder.png" %>
-  <!--     <%= image_tag "https://api.mapbox.com/[...]?access_token=pk.eyJ1IjoibGF5bmVyam9obnNvbiIsImEiOiJja2d3bHhtazgwNTlzMzRueDV0YXR0ZHZmIn0.G9YO9eAG9LrvdkyFByHx9w" %> -->
-    </div>
-  </div>
+    <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   <footer>
     <div class="footer">
     </div>

@@ -3,7 +3,13 @@ class DogsController < ApplicationController
   before_action :set_dog, only:[:show, :destroy]
 
   def index
-  @dogs = Dog.all
+    @dogs = Dog.where.not(latitude: nil, longitude: nil)
+    @markers = @dogs.geocoded.map do |dog|
+      {
+        lat: dog.latitude,
+        lng: dog.longitude
+      }
+    end
   end
 
   def show
