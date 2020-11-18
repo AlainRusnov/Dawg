@@ -10,6 +10,11 @@ class Dog < ApplicationRecord
   validates :name, presence: true
   validates :breed, presence: true
   validates :description, presence: true
+<<<<<<< HEAD
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+=======
+  validates :age, presence: true
+  validates :size, inclusion: { in: %w[small medium large]}
+>>>>>>> cf75d6042e548ea107112aee0b4026420b196a6c
 end
