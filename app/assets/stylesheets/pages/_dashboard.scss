@@ -1,0 +1,29 @@
+h1  {
+  font-family: 'Fredoka One', cursive;
+}
+
+.welcome {
+}
+
+.container {
+  display: flex;
+}
+
+.pending-requests {
+  border: 3px dashed $trippy-pink;
+  height: 700px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.my-dogs {
+  border: 3px dashed $trippy-pink;
+  height: 700px;
+  width: 50%;
+  margin-left: 10px;
+
+  background-color: white;
+  box-shadow: 8px 8px #FE0CF4;
+  border: 3px solid #0EFFE2;
+}
+
