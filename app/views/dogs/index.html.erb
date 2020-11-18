@@ -1,1 +1,66 @@
-<h1>DOGS INDEX PAGE</h1>
+
+<div class="main">
+  <div class="filter-search">
+
+
+    <h1 id="search-header" style="font-family:'Fredoka One', cursive; font-size: 50px;">Find a Pal</h1>
+  <div class="flex">
+    <div>
+      <h2 style="font-family:'Fredoka One', cursive; font-size: 30px;">Filter by size:</h2>
+    </div>
+    <div>
+      <ul class="dog-size list-inline">
+        <li>
+          <div class="icon-size list-inline">
+          <%= image_tag "noun_Dog_204896.png", height: 75, width: 75 %>
+          </div>
+        </li>
+        <li>
+          <div class="icon-size list-inline">
+          <%= image_tag "noun_Dog_151250.png", height: 75, width: 75 %>
+          </div>
+        </li>
+
+        <li>
+          <div class="icon-size list-inline">
+          <%= image_tag "noun_Dog_3601134.png", height: 75, width: 75 %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div class="container">
+
+    <div class="cards">
+      <% @dogs.each do |dog| %>
+
+      <div class="card">
+        <div class="img-search-dog">
+          <%= image_tag "dog-skateboard-how-to-train-guide.jpg", class: "img-dog" %>
+        </div>
+        <div class="dog-info">
+          <div class="center-v">
+            <h1 id="dog-name"><%= dog.name %></h1>
+            <h2 id="dog-breed"><%= dog.breed %></h2>
+            <!-- <p id="dog-description"><%= dog.description %></p> -->
+          </div>
+        </div>
+        <div id="see-more" class="btn-blue center-v">
+          <%= link_to "See More", dog_path(dog) %>
+        </div>
+      </div>
+
+      <% end %>
+    </div>
+
+    <div class="map">
+      <%= image_tag "map-placeholder.png" %>
+  <!--     <%= image_tag "https://api.mapbox.com/[...]?access_token=pk.eyJ1IjoibGF5bmVyam9obnNvbiIsImEiOiJja2d3bHhtazgwNTlzMzRueDV0YXR0ZHZmIn0.G9YO9eAG9LrvdkyFByHx9w" %> -->
+    </div>
+  </div>
+  <footer>
+    <div class="footer">
+    </div>
+  </footer>
+</div>

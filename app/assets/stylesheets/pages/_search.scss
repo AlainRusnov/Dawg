@@ -1,0 +1,168 @@
+// SCSS for search (index) page
+
+.center {
+  text-align: center;
+}
+
+.center-v {
+  vertical-align: center;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: auto;
+}
+
+.cards {
+  flex: 50%;
+  height: 100%;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  background-color: white;
+  height: 150px;
+  width: 100%;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+  img {
+    width: 220px;
+    height: 100%;
+    border-radius: 3px 0px 0px 3px;
+    object-fit: cover;
+  }
+
+}
+
+.flex {
+  display: flex;
+}
+
+.icon-size:hover {
+  background-color: white;
+  box-shadow: 8px 8px #FE0CF4;
+  border: 3px solid #0EFFE2;
+}
+
+.dog-info {
+  margin-left: 20px;
+  width: 20%;
+  position: relative;
+  left: -13px;
+
+}
+
+.dog-info a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.dog-info a:hover {
+  text-decoration: none;
+  color: $dope-aqua;
+
+}
+
+.map {
+  flex: 50%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+  }
+}
+
+.dog-size > li {
+  display: inline;
+}
+
+.filter-search {
+  margin-left: 165px;
+  margin-bottom: 25px;
+}
+
+.footer {
+  height: 200px;
+  width: 100%;
+}
+
+#search-header {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  left: 50px;
+}
+
+#dog-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#dog-breed {
+  font-size: 17px;
+
+}
+
+#dog-description {
+  font-size: 17px;
+}
+
+#see-more {
+  height: 50px;
+  position: relative;
+  right: 15px;
+}
+
+#see-more a {
+  text-align: center;
+}
+
+
+/*Media Queries*/
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
+}
+
