@@ -4,6 +4,8 @@
     <title>Dawg</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,8 +14,10 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' unless controller_name == "pages" %>
+    <%= render 'shared/navbar' unless controller_name == "pages" || controller_name == "sessions" %>
     <%= render 'shared/flashes' %>
+
+
 
    <!--  -->
     <%= yield %>
