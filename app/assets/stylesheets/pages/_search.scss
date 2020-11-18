@@ -75,7 +75,8 @@
 }
 
 .map {
-  flex: 50%;
+  // flex: 50%;
+  width: 45%;
   height: 100vh;
   position: sticky;
   top: 0;
@@ -103,7 +104,7 @@
 // }
 
 .filter-search {
-  margin-left: 165px;
+  margin-left: 20px;
   margin-bottom: 25px;
 }
 
