@@ -1,1 +1,8 @@
-<h1>Bookings NEW page</h1>
+<div class="booking-new">
+  <div class= "container">
+    <%= simple_form_for (@booking) do |f| %>
+      <%= f.input :description %>
+      <%= f.submit item_label_class: 'btn-blue' %>
+    <% end %>
+  </div>
+</div>
