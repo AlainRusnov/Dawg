@@ -14,8 +14,10 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' unless controller_name == "pages" %>
+    <%= render 'shared/navbar' unless controller_name == "pages" || controller_name == "sessions" %>
     <%= render 'shared/flashes' %>
+
+
 
    <!--  -->
     <%= yield %>
