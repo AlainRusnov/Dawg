@@ -6,29 +6,22 @@
   <div class="container">
       <div class="pending-requests">
         <h2>Pending Requests</h2>
+
+        <div class="request">
+
+        </div>
       </div>
 
   <div class="my-dogs">
+    <% i = 0 %>
 
-    <div class="dog">
-      <%= @dog.name %>
+      <% @dogs.each do |dog| %>
 
-    </div>
-    <div class="dog">
-
-    </div>
-    <div class="dog">
-
-    </div>
-
-  </div>
-
-<!--       <div class="my-dogs center">
-        <div class="dogs">
-          <div class="dog">
-
-          </div>
+        <div class="dog">
+          <%= image_tag "dog1-3.jpg"%>
+          <h4 class="center mt-2 dog-name"> <%= dog.name %> </h4>
+          <h5 class="center dog-breed"> <%= dog.breed %> </h5>
         </div>
-      </div> -->
 
+      <% end %>
   </div>
