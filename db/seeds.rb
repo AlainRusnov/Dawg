@@ -9,13 +9,14 @@
 require "faker"
 User.destroy_all
 Dog.destroy_all
+Booking.destroy_all
 puts "repopulating..."
 
 #Need to assign user_id when seeding
 adam = User.create(
   email: "imitalian@email.com",
-  password: "123456"
-  name: "Adam"
+  password: "123456",
+  name: "Adam",
   address: "5333 casgrain Montreal Quebec"
 )
 
@@ -24,7 +25,7 @@ adam = User.create(
   dog = Dog.create(
     name: Faker::Creature::Dog.name,
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.full_address ,
+    address: Faker::Address.full_address,
     age: rand(1..12),
     size: %w[small medium large ].sample,
     description: Faker::Creature::Dog.meme_phrase,
