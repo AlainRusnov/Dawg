@@ -6,9 +6,13 @@
 <div class="banner">
   <%#= image_tag "banner-image.jpg"%>
   <div class="top-btns">
-    <div class= "icon">
-      <p> Icon goes here!! </p>
-    </div>
+    <div>
+      <div class="dawg-logo-icon">
+      <%= link_to root_path, class: "navbar-icon" do %>
+        <%= image_tag "noun_puppy sunglasses_2018663.png" %>
+      <% end %>
+      </div>
+  </div>
     <div>
       <a href="/users/sign_in" class="btn-blue">Login</a>
     </div>
@@ -16,7 +20,7 @@
   <div class="banner-content">
     <h1>DA</h1>
     <h1>WG</h1>
-    <a href="/dogs" class="btn-blue">Find a Dog</a>
+    <a href="/dogs" id="find-a-dog" class="btn-blue">Find a Dog</a>
   </div>
 </div>
 
