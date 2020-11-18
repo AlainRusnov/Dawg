@@ -16,12 +16,15 @@ adam = User.create(
   email: "imitalian@email.com",
   password: "123456"
 )
-
-10.times do
+dog_attributes = [
+  { address: "5333 Avenue Casgrain, Montreal" },
+  { address: "1145 Avenue Lajoie, Outremont" },
+]
+dog_attributes.each do |dog|
   dog = Dog.create(
     name: Faker::Creature::Dog.name,
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.full_address ,
+    address: dog[:address] ,
     age: rand(1..12),
     size: %w[small medium large ].sample,
     description: Faker::Creature::Dog.meme_phrase,
