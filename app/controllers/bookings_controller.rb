@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
   def index
     @owner_bookings = current_user.owner_bookings
     @renter_bookings = current_user.renter_bookings
+    @dogs = Dog.all
     ##
   end
 
@@ -16,7 +17,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.dog = @dog
     if @booking.save
-      redirect_to dog_path(@dog)
+      redirect_to bookings_path
     else
       render :new
     end

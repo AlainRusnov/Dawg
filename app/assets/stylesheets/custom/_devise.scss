@@ -18,6 +18,8 @@
 }
 
 h2 {
+  color: #FE0CF4;
+  font-family: Coustard;
   margin-top: 14px;
   text-align: center;
   text-decoration: 1px solid black;
@@ -39,6 +41,22 @@ h2 {
   margin-right: 14px;
 }
 
+#booking_description {
+  width: fill;
+  box-shadow: 4px 4px 0px #FE0CF4;
+  margin-left: 8px;
+  margin-right: 14px;
+}
+
+.text {
+  color: #FE0CF4;
+  font-family: Coustard;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 900;
+  text-shadow: 2px 2px 0px #0EFFE2;
+  margin-left: 8px;
+}
 
 .email {
   color: #FE0CF4;
@@ -89,4 +107,16 @@ input.btn {
   margin-left: 16px;
   margin-top: 8px;
   margin-bottom: 4px;
+}
+
+.owner-info {
+  margin-left: 16px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  color: #FE0CF4;
+  font-family: Coustard;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 900;
+  text-shadow: 2px 2px 0px #0EFFE2;
 }
