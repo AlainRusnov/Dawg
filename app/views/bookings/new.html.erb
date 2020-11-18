@@ -1,8 +1,52 @@
-<div class="booking-new">
-  <div class= "container">
-    <%= simple_form_for (@booking) do |f| %>
-      <%= f.input :description %>
-      <%= f.submit item_label_class: 'btn-blue' %>
-    <% end %>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<div class="banner">
+  <%#= image_tag "banner-image.jpg"%>
+
+
+  <div class="banner-content">
+    <h1>DA</h1>
+    <h1>WG</h1>
+    <h2>rentals</h2>
   </div>
+
+
+
+
+
+
+  <div class="container-devise">
+    <div class="card-devise mt-5">
+    <h2>Book <%= @dog.name %></h2>
+    </div>
+  </div>
+
+  <div class="container-devise">
+    <div class="card-devise mt-5">
+    <%= simple_form_for [@dog, @booking] do |f| %>
+      <div class="form-inputs">
+        <%= f.input :description,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "Say why you want to book this dog" } %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Book" %>
+      </div>
+
+    <% end %>
+
+    <div class="owner-info">
+    <%= "Dog Owner :" %>
+    <%= @dog.user.name %>
+    </div>
+    </div>
+  </div>
+
+
+
 </div>
