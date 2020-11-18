@@ -10,13 +10,14 @@
 .top-btns {
   display: flex;
   justify-content: space-between;
+  margin-top: 8px;
 }
 
 .banner h1 {
 font-family: Coustard;
 font-style: normal;
 font-weight: 900;
-font-size: 120px;
+font-size: 180px;
 line-height: 120px;
 text-align: center;
 color: #0EFFE2;
@@ -28,7 +29,14 @@ margin-bottom: 16px;
 .banner-content {
 position: absolute;
 bottom: 100px;
-left: 100px;
+left: 60px;
 text-align: center;
+}
+
+.start-btn {
+  display: flex;
+  justify-content: center;
+
+
 }
 
