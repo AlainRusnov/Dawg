@@ -89,9 +89,17 @@
   }
 }
 
-.dog-size > li {
-  display: inline;
+.dog-size {
+  display: block ruby;
+  list-style-type: none;
+  position: relative;
+  left: 35px;
+  top: -21px;
 }
+
+// .dog-size > li {
+//   display: inline;
+// }
 
 .filter-search {
   margin-left: 165px;
