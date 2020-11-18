@@ -11,6 +11,6 @@ class User < ApplicationRecord
 
 
   # ADD THESE LATER
-  validates :name
-  validates :address
+  # validates :name,
+  validates :address, uniqueness: true
 end
