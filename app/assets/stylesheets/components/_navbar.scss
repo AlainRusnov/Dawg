@@ -2,14 +2,27 @@
   margin-bottom: 0px;
 }
 
-.search-form-control {
+.search-form-control, .form-group, .no-bmargin {
   display: flex;
   align-items: center;
+  border: 3px dashed #04f7e3;
+
+  :focus {
+    border: 3px solid #04f7e3 !important;
+    box-shadow: 8px 8px #FE0CF4 !important;
+  }
 }
+
 
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  border: 3px solid #04f7e3;
+  box-shadow: 8px 8px #FE0CF4;
+  width: 99%;
+  margin: auto;
+  margin-top: 8px;
+
 }
 
 .form-control {
@@ -32,7 +45,7 @@
 }
 
 .logo-name {
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Coustard', cursive;
     // font-family: 'Mitr', sans-serif;
     // font-family: 'Pacifico', cursive;
     // font-family: 'Viga', sans-serif;
@@ -40,10 +53,11 @@
     position: relative;
     left: 64px;
     top: 8px;
+    color: #FE0CF4;
 }
 
 .logo-name:hover {
-  color: rgb(254, 4, 189);
+  text-shadow: 3px 3px 0px #04f7e3;
 }
 
 // .navbar-nav-dawg li {
@@ -75,11 +89,13 @@
 }
 
 .navbar-light .navbar-nav .active > .nav-link {
-  color: black;
+  color: #FE0CF4;
+  font-family: Coustard;
+  font-size: 16px;
 }
 
 .navbar-light .navbar-nav .active > .nav-link:hover {
-  color: rgb(254, 4, 189);
+  text-shadow: 3px 3px 0px #04f7e3;
 }
 
 .search-form-control {
@@ -91,6 +107,7 @@
   top: 8px;
   bottom: 8px;
   right: 8px;
+  color: #FE0CF4;
 }
 
 .search-form-control .form-control {
@@ -104,4 +121,5 @@
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
+
 
