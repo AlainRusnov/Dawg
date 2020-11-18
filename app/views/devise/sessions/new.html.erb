@@ -3,7 +3,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swap" rel="stylesheet">
 </head>
-
+<div class="customformstyle">
 <div class="banner">
   <%#= image_tag "banner-image.jpg"%>
 
@@ -23,24 +23,25 @@
     <div class="card-devise mt-5">
     <h2>Log in</h2>
 
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-inputs">
-        <%= f.input :email,
-                    required: false,
-                    autofocus: true,
-                    input_html: { autocomplete: "email" } %>
-        <%= f.input :password,
-                    required: false,
-                    input_html: { autocomplete: "current-password" } %>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-      </div>
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" } %>
+          <%= f.input :password,
+                      required: false,
+                      input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Login" %>
+        <div class="form-actions">
+          <%= f.button :submit, "Login" %>
+        </div>
+      <% end %>
+      <div class="loginlinks">
+      <%= render "devise/shared/links" %>
       </div>
-    <% end %>
-    <div class="loginlinks">
-    <%= render "devise/shared/links" %>
     </div>
   </div>
 </div>
