@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require "faker"
+User.destroy_all
+Dog.destroy_all
+puts "repopulating..."
 
 #Need to assign user_id when seeding
 adam = User.create(
@@ -18,6 +21,9 @@ adam = User.create(
   dog = Dog.create(
     name: Faker::Creature::Dog.name,
     breed: Faker::Creature::Dog.breed,
+    address: Faker::Address.full_address ,
+    age: rand(1..12),
+    size: %w[small medium large ].sample,
     description: Faker::Creature::Dog.meme_phrase,
     user: adam
   )

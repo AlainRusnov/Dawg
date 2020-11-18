@@ -10,4 +10,6 @@ class Dog < ApplicationRecord
   validates :name, presence: true
   validates :breed, presence: true
   validates :description, presence: true
+  validates :age, presence: true
+  validates :size, inclusion: { in: %w[small medium large]}
 end
