@@ -24,7 +24,7 @@
         </div>
         <div class="d-flex p-5">
           <%= link_to "Accept", booking_accept_path(booking), method: :patch, class: "btn-blue mr-3" %>
-          <%= link_to "Decline", booking_decline_path(booking), method: :patch, class: "btn-blue mr-3" %>
+          <%= link_to "Decline", booking_reject_path(booking), method: :patch, class: "btn-blue mr-3" %>
       <% end %>
     </div>
   </div>
