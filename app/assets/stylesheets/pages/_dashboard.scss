@@ -56,15 +56,26 @@ h1  {
   object-fit: cover;
   height: 170px;
   width: 100%;
-}
 
-.dog-name:hover {
-  color: #FE0CF4;
+.dog a {
 
 }
+}
 
-.dog-breed:hover {
-  color: #0EFFE2;
+.dog-name {
+  text-decoration: none;
+  color: black;
+  margin: 0 auto;
+  font-size: 20px;
+
+  &:hover {
+    color: #FE0CF4;
+    text-decoration: none;
+  }
+}
+
+.dog-breed {
+  font-size: 20px;
 }
 
 .request {
