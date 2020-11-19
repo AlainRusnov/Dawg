@@ -1,4 +1,4 @@
-.customformstyle {
+#customformstyle {
 
  .container-devise {
     display: flex;
@@ -45,9 +45,11 @@
 
   #booking_description {
     width: fill;
+    height: 120px;
     box-shadow: 4px 4px 0px #FE0CF4;
     margin-left: 8px;
     margin-right: 14px;
+    color: black;
   }
 
   .text {
@@ -58,9 +60,10 @@
     font-weight: 900;
     text-shadow: 2px 2px 0px #0EFFE2;
     margin-left: 8px;
+    margin-top: 4px;
   }
 
-  .email {
+   .email {
     color: #FE0CF4;
     font-family: Coustard;
     font-style: normal;
@@ -111,6 +114,10 @@
     margin-bottom: 4px;
   }
 
+  // .row {
+  //   display: grid;
+  //   justify-content: center;
+  // }
   .owner-info {
     margin-left: 16px;
     margin-top: 8px;
@@ -118,8 +125,24 @@
     color: #FE0CF4;
     font-family: Coustard;
     font-style: normal;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 900;
     text-shadow: 2px 2px 0px #0EFFE2;
+
   }
+
+    .doggo-icon {
+      width: 100px;
+      height: 100px;
+      margin-left: 300px;
+      opacity: 0;
+      position: relative;
+    }
+
+    .card-devise:hover > .doggo-icon {
+      opacity: 1;
+    }
+
+
+
 }
