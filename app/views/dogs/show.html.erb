@@ -16,7 +16,11 @@
   <div class="show-content">
     <div class="show-headers">
       <h2><%= @dog.name %></h2>
-      <a href=<%="/dogs/#{@dog.id}/bookings/new"%> class="btn-blue">Book this dog!</a>
+      <% if current_user == @dog.user_id %>
+        <a href=<%="/dogs/#{@dog.id}/bookings/new"%> class="btn-blue">Book this dog!</a>
+      <% else %>
+        <a href=<%="/dogs/#{@dog.id}/edit"%> class="btn-blue">Edit</a>
+      <% end %>
     </div>
     <div class="show-body">
       <h5><%= @dog.breed %></h5>

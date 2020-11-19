@@ -13,13 +13,13 @@ Booking.destroy_all
 puts "repopulating..."
 
 #Need to assign user_id when seeding
+
 adam = User.create(
   email: "imitalian@email.com",
   password: "123456",
   name: "Adam",
   address: "5333 casgrain Montreal Quebec"
 )
-
 
 10.times do
   dog = Dog.create(
@@ -32,3 +32,55 @@ adam = User.create(
     user: adam
   )
 end
+
+
+
+
+
+
+
+
+
+
+
+# Bookings testing seeds (lj):
+
+layne = User.create(
+  email: "johnson@dawg.com",
+  password: "123456",
+  name: "Layne",
+  address: "4571 rue de la Roche, Montreal, QC"
+)
+
+Dog.create(
+    name: "Pickles",
+    breed: "Pug",
+    address: "4571 rue de la Roche, Montreal, QC",
+    age: rand(1..12),
+    size: "small",
+    description: "This little guy is the MAN.",
+    user: layne
+    )
+
+Dog.create(
+    name: "Moose",
+    breed: "Saint Bernard",
+    address: "4571 rue de la Roche, Montreal, QC",
+    age: rand(1..12),
+    size: "large",
+    description: "My big guy.",
+    user: layne
+    )
+
+Dog.create(
+    name: "Geronimo",
+    breed: "German Shepherd",
+    address: "4571 rue de la Roche, Montreal, QC",
+    age: rand(1..12),
+    size: "large",
+    description: "This big guy is the MAN.",
+    user: layne
+    )
+
+
+
