@@ -52,6 +52,20 @@ layne = User.create(
   address: "4571 rue de la Roche, Montreal, QC"
 )
 
+renter = User.create(
+  email: "renter@dawg.com",
+  password: "123456",
+  name: "Renter Name",
+  address: "4555 rue de la Roche, Montreal, QC"
+)
+
+dogless = User.create(
+  email: "dogless@dawg.com",
+  password: "123456",
+  name: "Dogless",
+  address: "4666 rue de la Roche, Montreal, QC"
+)
+
 Dog.create(
     name: "Pickles",
     breed: "Pug",

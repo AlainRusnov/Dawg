@@ -4,68 +4,53 @@
 
   <div class="title-container d-flex">
     <div>
-      <h4 style="text-align: left">Pending Requests</h4>
+      <h4 style="text-align: left; font-family: 'Fredoka One', cursive">Pending Requests</h4>
     </div>
     <div>
-      <h4>My DAWGs</h4>
+ <!--      <h4 style="font-family: 'Fredoka One', cursive;">My DAWGs</h4> -->
     </div>
   </div>
 
   <div class="container">
       <div class="pending-requests">
 
+        <% @owner_bookings.each do |booking| %>
+
         <div class="request">
-          <div class="dog-image ml-5"><h6 style="font-weight: bold; margin: 0 auto"></h6></div>
-          <div class="request-body">
-            <div><h5 class="ml-3 mt-3" style="font-weight: bold">alainshreddds50</h5></div>
-            <div><p class="ml-3">Taking Tucker to get SWOL.</p></div>
-          </div>
-          <div class="d-flex p-5">
-            <a href="#" class="btn-blue mr-3">Accept</a>
-            <a href="#" class="btn-blue p-2">Decline</a>
-          </div>
+        <div class="dog-image ml-5">
+          <h6><%= booking.dog.name %></h6>
         </div>
 
-<!--         <div class="request">
-          <div class="dog-image ml-5"></div>
-          <div class="request-body">
-            <div><h5 class="ml-3 mt-3" style="font-weight: bold">alejandroc</h5></div>
-            <div><p class="ml-3">Does Lola like music?</p></div>
-          </div>
-          <div class="d-flex p-5">
-            <a href="#" class="btn-blue mr-3">Accept</a>
-            <a href="#" class="btn-blue p-2">Decline</a>
-          </div>
-        </div> -->
-
-
-
-      <div class="request">
-          <div class="dog-image ml-5"></div>
-          <div class="request-body">
-            <div><h5 class="ml-3 mt-3" style="font-weight: bold">lj5555</h5></div>
-            <div><p class="ml-3">Farmer's market and the park.</p></div>
-          </div>
-          <div class="d-flex p-5">
-            <a href="#" class="btn-blue mr-3">Accept</a>
-            <a href="#" class="btn-blue p-2">Decline</a>
-          </div>
+        <div class="request-body">
+          <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+          <div><p class="ml-3">Farmer's market and the park.</p></div>
+        </div>
+        <div class="d-flex p-5">
+          <a href="#" class="btn-blue mr-3">Accept</a>
+          <a href="#" class="btn-blue p-2">Decline</a>
+        </div>
       </div>
+       <% end %>
 
     </div>
     <div class="my-dogs">
+      <% if current_user.dogs == nil %>
+      <h1>hello</h1>
+        <h1>hello there</h1>
 
-      <% current_user.dogs.each do |dog| %>
         <div class="dog">
           <%= image_tag "dog1-3.jpg"%>
-          <%= link_to dog.name, dog_path(dog), class: "dog-name" %>
-          <h2 class="dog-breed"> <%= dog.breed %> </h2>
-<!--           <h3 class="center dog-breed"> Age: <%= dog.age %></h3>
-          <h3 class="center dog-breed"> Size: <%= dog.age %></h3> -->
-
         </div>
-      <% end %>
+        <% else %>
 
+        <% current_user.dogs.each do |dog| %>
+          <div class="dog">
+            <%= image_tag "dog1-3.jpg"%>
+            <%= link_to dog.name, dog_path(dog), class: "dog-name" %>
+            <h2 class="dog-breed"> <%= dog.breed %> </h2>
+          </div>
+        <% end %>
+<% end %>
     </div>
 </div>
 
