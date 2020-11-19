@@ -69,8 +69,10 @@
             </div>
           </div>
           <div class="d-flex p-5">
-            <a href="#" id="accept" class="btn-blue mr-3">Accept</a>
-            <a href="#" id="decline" class="btn-blue p-2">Decline</a>
+            <!-- <a href="#" id="accept" class="btn-blue mr-3">Accept</a> -->
+            <%= link_to "Accept", booking_accept_path(booking), method: :patch, class: "btn-blue mr-3" %>
+            <!-- <a href="#" id="decline" class="btn-blue p-2">Decline</a> -->
+            <%= link_to "Decline", booking_reject_path(booking), method: :patch, class: "btn-blue mr-3" %>
           </div>
         </div>
 <% end %>

@@ -4,7 +4,6 @@ class BookingsController < ApplicationController
   def index
     @owner_bookings = current_user.owner_bookings
     @renter_bookings = current_user.renter_bookings
-    @dogs = Dog.all
     ##
   end
 
@@ -21,6 +20,20 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def accept
+    booking = Booking.find(params[:id])
+    booking.status = true
+    booking.save
+    redirect_to bookings_path
+  end
+
+  def reject
+    booking = Booking.find(params[:id])
+    booking.status = false
+    booking.save
+    redirect_to bookings_path
   end
 
   def destroy
