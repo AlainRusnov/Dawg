@@ -13,12 +13,14 @@ Booking.destroy_all
 puts "repopulating..."
 
 #Need to assign user_id when seeding
+
 adam = User.create(
   email: "imitalian@email.com",
   password: "123456",
   name: "Adam",
   address: "5333 casgrain Montreal Quebec"
 )
+
 dog_attributes = [
   { address: "5333 Avenue Casgrain, Montreal" },
   { address: "1145 Avenue Lajoie, Outremont" },
@@ -31,6 +33,7 @@ dog_attributes = [
   { address: "800 Rue Gagné, Lachine"},
   { address: "4430 Rue Sainte-Catherine Ouest, Westmount"}
 ]
+
 dog_attributes.each do |dog|
   dog = Dog.create(
     name: Faker::Creature::Dog.name,
@@ -42,5 +45,6 @@ dog_attributes.each do |dog|
     user: adam
   )
 end
-
 puts "Done!"
+
+
