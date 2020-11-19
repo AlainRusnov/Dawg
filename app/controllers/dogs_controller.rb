@@ -3,8 +3,16 @@ class DogsController < ApplicationController
   before_action :set_dog, only:[:show, :destroy, :edit]
 
   def index
-  @dogs = Dog.all
+    @dogs = Dog.all
+    @markers = @dogs.geocoded.map do |dog|
+      {
+        lat: dog.latitude,
+        lng: dog.longitude,
+        infoWindow: render_to_string(partial: "/shared/info_window", locals: { dog: dog })
+      }
+    end
   end
+
 
   def show
   end

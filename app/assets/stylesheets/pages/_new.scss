@@ -1,12 +1,45 @@
 .new-dog-container {
 
+  .container {
+    margin: auto;
+  }
+
+  .header {
+      color: #FE0CF4;
+      font-family: Coustard;
+      font-style: normal;
+      font-weight: 900;
+      text-shadow: 4px 4px 0px #0EFFE2;
+      text-align: center;
+      margin-top: 24px;
+  }
+
+  .simple_form {
+    width: 100%;
+  }
+
+  .form-control {
+     border: 3px dashed #0EFFE2;
+
+  }
+
+  .dogrow {
+    display: flex;
+    justify-content: space-between;
+
+    .form-group {
+      width: 49%;
+
+    }
+  }
+
   input[type=text] {
-    border: 3px dashed #0EFFE2;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     color: #FE0CF4;
+    width: 100%;
   }
 
   input[type=text]:focus {
@@ -14,12 +47,48 @@
     box-shadow: 8px 8px #FE0CF4;
   }
 
+
+  input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    color: #FE0CF4;
+    width: 100%;
+  }
+
+  input[type=number]:focus {
+    border: 3px solid #0EFFE2;
+    box-shadow: 8px 8px #FE0CF4;
+  }
+
+  input[type=submit] {
+    background-color: #04f7e3;
+    color:#fc3adc;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    padding: 8px 16px;
+    border: 3px dashed #fc3adc;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background .3s;
+    font-family: Coustard;
+  }
+
+  input[type=submit]:hover {
+    background-color: #fc3adc;
+    color: #04f7e3;
+    border: 3px dashed #04f7e3;
+    text-decoration: none;
+  }
+
   textarea.form-control {
     width: 100%;
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 3px dashed #0EFFE2;
     resize: none;
     color: #FE0CF4;
   }
@@ -36,6 +105,40 @@
       font-weight: 900;
       text-shadow: 4px 4px 0px #0EFFE2;
       text-align: center;
+  }
+
+  ::placeholder {
+  color: rgba(249, 11, 244, .6)
+}
+
+  label {
+  background-color: #04f7e3;
+  color:#fc3adc;
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  padding: 8px 16px;
+  border: 3px dashed #fc3adc;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background .3s;
+  font-family: Coustard;
+  }
+
+  label:hover {
+      background-color: #fc3adc;
+      color: #04f7e3;
+      border: 3px dashed #04f7e3;
+      text-decoration: none;
+  }
+
+  .photo-label {
+   display: none;
+
+  }
+  input[type="file"] {
+  display: none;
   }
 
   //

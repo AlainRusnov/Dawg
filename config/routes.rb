@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create, :show, :edit, :update] # edit/update only on status ?
   end
   resources :bookings, only:[:destroy,:index]
+  patch "bookings/:id/accept", to: "bookings#accept", as: :booking_accept
+  patch "bookings/:id/reject", to: "bookings#reject", as: :booking_reject
   # put destroy outside of nested loop -> because ends up being dogs/dog_id/bookings/:id and not /bookings/:id
 
   # delete user but also dog destroy should be only by user id stored to dog ?
