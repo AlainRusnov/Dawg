@@ -5,6 +5,8 @@ class BookingsController < ApplicationController
     @owner_bookings = current_user.owner_bookings
     @renter_bookings = current_user.renter_bookings
     @dogs = Dog.all
+    @owner_dogs = current_user.dogs
+    @renter_dogs = current_user.dogs
     ##
   end
 
@@ -40,4 +42,3 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:description) ## user_id/dog_id or user/dog ?
   end
 end
-
