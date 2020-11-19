@@ -4,32 +4,27 @@
 </head>
 
 <div class="new-dog-container">
+  <div class="header"> <h2>ADD YOUR DOG!</h2></div>
   <div class= "container">
-  <h2>Add your dog!</h2>
-  <form>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <input type="text" class="form-control" id="inputName" placeholder="name">
+      <%= simple_form_for (@dog) do |f| %>
+      <div class="dogrow">
+        <%= f.input :name, label: false, placeholder: "name" %>
+        <%= f.input :breed, label: false, placeholder: "breed" %>
       </div>
-      <div class="form-group col-md-6">
-        <input type="text" class="form-control" id="inputBreed" placeholder="breed">
+      <div class="dogrow">
+        <%= f.input :size, label: false, placeholder: "size" %>
+        <%= f.input :age, label: false, placeholder: "age" %>
       </div>
-    </div>
-    <div class="form-group">
-      <textarea class="form-control" id="inputDescription" rows="3" placeholder="tell us about your furry lil' dude!"></textarea>
-    </div>
-    <button type="submit" class="btn-blue">Add Dog!</button>
-  </form>
+      <%= f.input :address, label: false, placeholder: "address" %>
+      <%= f.input :description, label: false, placeholder: "tell us about your furry lil' dude!" %>
+       <div class="dogrow">
+        <label class="photo-label"></label>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.submit %>
+
+       </div>
+      <% end %>
+
 </div>
 
 
-      <%= simple_form_for (@dog) do |f| %>
-        <%= f.input :name %>
-        <%= f.input :breed %>
-        <%= f.input :description %>
-        <%= f.input :size %>
-        <%= f.input :age %>
-        <%= f.input :address %>
-        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-        <%= f.submit input_html: { class: 'btn-blue' } %>
-      <% end %>
