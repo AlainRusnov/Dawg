@@ -12,20 +12,22 @@
   </div>
 
   <div class="container">
-      <div class="pending-requests">
-
+    <div class="pending-requests">
+      <% @owner_bookings.each do |booking| %>
         <div class="request">
-          <div class="dog-image ml-5"><h6 style="font-weight: bold; margin: 0 auto"></h6></div>
-          <div class="request-body">
-            <div><h5 class="ml-3 mt-3" style="font-weight: bold">alainshreddds50</h5></div>
-            <div><p class="ml-3">Taking Tucker to get SWOL.</p></div>
-          </div>
-          <div class="d-flex p-5">
-            <a href="#" class="btn-blue mr-3">Accept</a>
-            <a href="#" class="btn-blue p-2">Decline</a>
-          </div>
+        <div class="dog-image ml-5">
+          <h6><%= booking.dog.name %></h6>
         </div>
-
+        <div class="request-body">
+          <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+          <div><p class="ml-3">Farmer's market and the park.</p></div>
+        </div>
+        <div class="d-flex p-5">
+          <%= link_to "Accept", booking_accept_path(booking), method: :patch, class: "btn-blue mr-3" %>
+          <%= link_to "Decline", booking_reject_path(booking), method: :patch, class: "btn-blue mr-3" %>
+      <% end %>
+    </div>
+  </div>
 <!--         <div class="request">
           <div class="dog-image ml-5"></div>
           <div class="request-body">
