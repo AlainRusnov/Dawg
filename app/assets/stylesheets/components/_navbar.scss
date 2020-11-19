@@ -1,125 +1,149 @@
-.no-bmargin {
-  margin-bottom: 0px;
-}
+.dawg-navbar {
 
-.search-form-control {
-  display: flex;
-  align-items: center;
-  border: 3px dashed #04f7e3;
-
-  :focus {
-    border: 3px solid #04f7e3 !important;
-    box-shadow: 8px 8px #FE0CF4 !important;
+  h1 {
+    margin: 0;
+    // left: 0;
   }
-}
+  .no-bmargin {
+    margin-bottom: 0px;
+  }
 
 
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-  border: 3px solid #04f7e3;
-  box-shadow: 8px 8px #FE0CF4;
-  width: 99%;
-  margin: auto;
-  margin-top: 8px;
+  .search-form-control, .form-group, .no-bmargin {
+    display: flex;
+    align-items: center;
 
-}
 
-.form-control {
-  width: 300px;
-  border-radius: 5px;
-}
+    :focus {
+      border: 3px solid #04f7e3 !important;
+      box-shadow: 8px 8px #FE0CF4 !important;
+    }
+    input {
+     border: 3px dashed #04f7e3;
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+    }
+  }
 
-.navbar-icon img {
-  width: 75px;
-  height: auto;
-}
 
-.dawg-logo-icon {
-  position: absolute;
-  top: -7px;
-}
+  .navbar-lewagon {
+    display: flex;
 
-.logo-name {
-    font-family: 'Coustard', cursive;
-    // font-family: 'Mitr', sans-serif;
-    // font-family: 'Pacifico', cursive;
-    // font-family: 'Viga', sans-serif;
-    font-size: 22px;
+    justify-content: space-between;
+    background: white;
+    border: 3px solid #04f7e3;
+    box-shadow: 8px 8px #FE0CF4;
+    width: 99%;
+    margin: auto;
+    margin-top: 8px;
+    align-items: center;
+
+  }
+
+  .form-control {
+    width: 300px;
+    border-radius: 5px;
+  }
+
+  .navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .navbar-icon img {
+    width: 50px;
+
+  }
+
+  .dawg-logo-icon {
+    display: flex;
+    justify-content: space-between;
+    width: 12%;
+
+    a {
+      width: 40px;
+      height: 40px;
+
+      .logosvg {
+        width: 100%;
+        height: 100%;
+        background-size: cover;      }
+    }
+
+
+  }
+
+  .logo-name {
+      font-family: 'Coustard', cursive;
+      // font-family: 'Mitr', sans-serif;
+      // font-family: 'Pacifico', cursive;
+      // font-family: 'Viga', sans-serif;
+      font-size: 22px;
+      align-self: center;
+      color: #FE0CF4;
+  }
+
+  .logo-name:hover {
+    text-shadow: 3px 3px 0px #04f7e3;
+  }
+
+  // .navbar-nav-dawg li {
+  //   padding-right: 0px;
+  // }
+
+  .avatar-user {
+    width: 50px;
+    height: auto;
+    padding: 0px;
+
+  }
+
+  .avatar-carrot {
+    width: 35px;
+    height: auto;
+    padding: 0px;
+    // position: relative;
+    right: 15px;
+  }
+
+  .nav-link {
     position: relative;
-    left: 64px;
-    top: 8px;
+    top: 5px;
+  }
+
+  .nav-link a:hover {
+    padding-right: 50px;
+  }
+
+  .navbar-light .navbar-nav .active > .nav-link {
     color: #FE0CF4;
+    font-family: Helvetica;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  .navbar-light .navbar-nav .active > .nav-link:hover {
+    text-shadow: 3px 3px 0px #04f7e3;
+  }
+
+  .search-form-control {
+    position: relative;
+  }
+
+  .search-form-control .btn {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    right: 8px;
+    color: #FE0CF4;
+  }
+
+  .search-form-control .form-control {
+    height: 3.5rem;
+  }
+
+  .search-form-control .form-control:focus {
+    border: 1px solid rgb(15, 255, 225);
+    outline: none !important;
+
+  }
+
 }
-
-.logo-name:hover {
-  text-shadow: 3px 3px 0px #04f7e3;
-}
-
-// .navbar-nav-dawg li {
-//   padding-right: 0px;
-// }
-
-.avatar-user {
-  width: 50px;
-  height: auto;
-  padding: 0px;
-
-}
-
-.avatar-carrot {
-  width: 35px;
-  height: auto;
-  padding: 0px;
-  // position: relative;
-  right: 15px;
-}
-
-.nav-link {
-  position: relative;
-  top: 5px;
-}
-
-.nav-link a:hover {
-  padding-right: 50px;
-}
-
-.navbar-light .navbar-nav .active > .nav-link {
-  color: #FE0CF4;
-  font-family: Coustard;
-  font-size: 16px;
-}
-
-.navbar-light .navbar-nav .active > .nav-link:hover {
-  text-shadow: 3px 3px 0px #04f7e3;
-}
-
-.search-form-control {
-  position: relative;
-}
-
-.search-form-control .btn {
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
-  color: #FE0CF4;
-}
-
-.search-form-control .form-control {
-  height: 3.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
-}
-
-.search-form-control .form-control:focus {
-  border: 1px solid rgb(15, 255, 225);
-  outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-
