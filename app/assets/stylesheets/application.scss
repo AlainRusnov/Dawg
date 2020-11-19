@@ -16,11 +16,13 @@
 @import "pages/new";
 @import "pages/dashboard";
 @import "pages/new-booking";
+@import "pages/map";
 
 
 
 //custom
 @import "custom/devise";
+@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 
 
 

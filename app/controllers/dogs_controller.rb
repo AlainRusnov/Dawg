@@ -7,7 +7,8 @@ class DogsController < ApplicationController
     @markers = @dogs.geocoded.map do |dog|
       {
         lat: dog.latitude,
-        lng: dog.longitude
+        lng: dog.longitude,
+        infoWindow: render_to_string(partial: "/shared/info_window", locals: { dog: dog })
       }
     end
   end
