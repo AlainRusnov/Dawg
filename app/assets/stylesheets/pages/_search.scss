@@ -1,183 +1,225 @@
 // SCSS for search (index) page
+.index-page {
 
-.center {
-  text-align: center;
-}
-
-.center-v {
-  vertical-align: center;
-}
-
-.container {
-  display: flex;
-  height: 100vh;
-  width: auto;
-}
-
-.cards {
-  flex: 50%;
-  height: 600px;
-  top: 0;
-  overflow-y: auto;
-}
-
-.card {
-  display: flex;
-  flex-direction: initial;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-  background-color: white;
-  height: 150px;
-  width: 100%;
-  border-radius: 3px;
-  margin-bottom: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-
-  img {
-    width: 220px;
-    height: 100%;
-    border-radius: 3px 0px 0px 3px;
-    object-fit: cover;
+  .center {
+    text-align: center;
   }
 
-}
+  .center-v {
+    vertical-align: center;
+  }
 
-.flex {
-  display: flex;
-}
+  .dogcontainer {
+    display: flex;
+    height: 100vh;
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 
-.icon-size:hover {
-  background-color: white;
-  box-shadow: 8px 8px #FE0CF4;
-  border: 3px solid #0EFFE2;
-}
-
-.dog-info {
-  margin-left: 20px;
-  width: 20%;
-  position: relative;
-  left: -13px;
-
-}
-
-.dog-info a {
-  text-decoration: none;
-  color: black;
-
-}
-
-.dog-info a:hover {
-  text-decoration: none;
-  color: $dope-aqua;
-
-}
-
-#map {
-  // width: 300px;
-  // flex: 50%;
-  // height: 100vh;
-  // position: sticky;
-  // top: 0;
-// .map {
-//   // flex: 50%;
-//   width: 45%;
-//   height: 100vh;
-//   position: sticky;
-//   top: 0;
-
-
-//   // img {
-//   //   width: 100%;
-//   //   height: 100%;
-//   //   border-radius: 3px;
-//   //   object-fit: cover;
-//   // }
-}
-
-.dog-size {
-  display: inline-flex;
-  list-style-type: none;
-  position: relative;
-  left: 35px;
-  top: -6px;
-
-}
-
-// .dog-size > li {
-//   display: inline;
-// }
-
-.filter-search {
-  margin-left: 20px;
-  margin-bottom: 25px;
-}
-
-.footer {
-  height: 200px;
-  width: 100%;
-}
-
-#search-header {
-  margin-top: 50px;
-  margin-bottom: 20px;
-  left: 50px;
-}
-
-#dog-name {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-#dog-breed {
-  font-size: 17px;
-
-}
-
-#dog-description {
-  font-size: 17px;
-}
-
-#see-more {
-  height: 50px;
-  position: relative;
-  right: 15px;
-}
-
-#see-more a {
-  text-align: center;
-}
-
-
-/*Media Queries*/
-
-/*Smallest device*/
-@media (min-width: 100px) and (max-width: 575px) {
   .cards {
-    grid-template-columns: 1fr;
+    flex: 50%;
+    height: 600px;
+    top: 0;
+    overflow-y: auto;
+    margin-right: 16px;
   }
-  #map {
-    display: none;
-  }
-}
 
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-  #map {
-    display: none;
-  }
-}
+  .card {
+    display: flex;
+    flex-direction: initial;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    background-color: white;
+    height: 180px;
+    width: 100%;
+    margin-bottom: 16px;
+    margin-right: 8px;
+    border: 3px dashed #0EFFE2;
+    // box-shadow: 2px 2px #FE0CF4;
+     img {
+      width: 200px;
+      height: 100%;
+      object-fit: cover;
+      border: 3px solid #0EFFE2;
+      box-shadow: 8px 8px #FE0CF4;
 
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  #map {
-    display: block;
-  }
-}
+      margin-left: 16px;
+    }
 
+    h1 {
+      font-family: Coustard;
+      color: #FE0CF4;
+      font-weight: 900;
+      margin: 8px;
+    }
+
+    h2 {
+      color: #0EFFE2;
+      font-weight: 900;
+      margin-left: 8px;
+    }
+
+    a {
+      color: #FE0CF4;
+      text-decoration: none;
+      height: 50px;
+    }
+
+    a:hover {
+      color: #0EFFE2;
+    }
+
+  }
+
+  .icon-size:hover {
+    background-color: white;
+    // box-shadow: 8px 8px #FE0CF4;
+    border: 3px dashed #0EFFE2;
+  }
+
+  .dog-info {
+    margin-left: 20px;
+    width: 20%;
+    position: relative;
+    left: -13px;
+
+  }
+
+  .dog-info a {
+    text-decoration: none;
+    color: black;
+
+  }
+
+  .dog-info a:hover {
+    text-decoration: none;
+    color: $dope-aqua;
+
+  }
+
+  #map {
+    // width: 300px;
+    // flex: 50%;
+    // height: 100vh;
+    // position: sticky;
+    // top: 0;
+  // .map {
+  //   // flex: 50%;
+  //   width: 45%;
+  //   height: 100vh;
+  //   position: sticky;
+  //   top: 0;
+
+
+  //   // img {
+  //   //   width: 100%;
+  //   //   height: 100%;
+  //   //   border-radius: 3px;
+  //   //   object-fit: cover;
+  //   // }
+  // border: 1px solid green;
+  }
+
+  .dog-size {
+    display: inline-flex;
+    list-style-type: none;
+    position: relative;
+    left: 35px;
+    top: 6px;
+    align-items: flex-end;
+    margin: 4px;
+
+    li {
+      margin-right: 16px;
+    }
+
+  }
+
+  // .dog-size > li {
+  //   display: inline;
+  // }
+
+  .filter-search {
+    display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    align-items: baseline;
+    justify-content: space-between;
+    color: #FE0CF4;
+    text-shadow: 3px 3px 0px #0EFFE2;
+  }
+
+  .icon-list {
+    width: 253px;
+    padding: 0px;
+  }
+  .footer {
+    height: 200px;
+    width: 100%;
+  }
+
+  #search-header {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    left: 50px;
+  }
+
+  #dog-name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  #dog-breed {
+    font-size: 17px;
+
+  }
+
+  #dog-description {
+    font-size: 17px;
+  }
+
+  #see-more {
+    position: relative;
+    right: 15px;
+  }
+
+  #see-more a {
+    text-align: center;
+  }
+
+
+  /*Media Queries*/
+
+  /*Smallest device*/
+  @media (min-width: 100px) and (max-width: 575px) {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+    #map {
+      display: none;
+    }
+  }
+
+  /*Small devices (landscape phones, 576px and up)*/
+  @media (min-width: 576px) {
+    .cards {
+      grid-template-columns: 1fr 1fr;
+    }
+    #map {
+      display: none;
+    }
+  }
+
+  /*Medium devices (tablets, 768px and up)*/
+  @media (min-width: 1200px) {
+    .cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    #map {
+      display: block;
+    }
+  }
+
+}

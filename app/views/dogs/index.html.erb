@@ -1,35 +1,33 @@
 
-<div class="main">
+<div class="index-page">
 
   <div class="filter-search">
-    <h1 id="search-header" style="font-family:'Fredoka One', cursive; font-size: 50px;">Find a Local DAWG</h1>
-  <div class="flex">
     <div>
-      <h2 style="font-family:'Fredoka One', cursive; font-size: 30px;">Filter by size:</h2>
+      <h1 id="search-header" style="font-family:'Coustard', cursive; font-size: 24px;">DAWGS near you:</h1>
     </div>
-    <div>
+    <div class="icon-list">
       <ul class="dog-size list-inline">
         <li>
           <div class="icon-size list-inline">
-          <%= image_tag "noun_Dog_204896.png", height: 75, width: 75 %>
+          <%= image_tag "smalldog.svg", height: 28, width: 50 %>
           </div>
         </li>
         <li>
           <div class="icon-size list-inline">
-          <%= image_tag "noun_Dog_151250.png", height: 75, width: 75 %>
+          <%= image_tag "meddog.svg", height: 55, width: 55%>
           </div>
         </li>
 
         <li>
           <div class="icon-size list-inline">
-          <%= image_tag "noun_Dog_3601134.png", height: 75, width: 75 %>
+          <%= image_tag "bigdog.svg", height: 75, width: 75 %>
           </div>
         </li>
       </ul>
     </div>
+
   </div>
-  </div>
-  <div class="container">
+  <div class="dogcontainer">
 
     <div class="cards">
       <% @dogs.each do |dog| %>
@@ -62,4 +60,5 @@
     <div class="footer">
     </div>
   </footer>
+</div>
 </div>
