@@ -1,4 +1,4 @@
-.customformstyle {
+#customformstyle {
 
  .container-devise {
     display: flex;
@@ -58,9 +58,10 @@
     font-weight: 900;
     text-shadow: 2px 2px 0px #0EFFE2;
     margin-left: 8px;
+    margin-top: 4px;
   }
 
-  .email {
+   .email {
     color: #FE0CF4;
     font-family: Coustard;
     font-style: normal;
