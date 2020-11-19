@@ -3,7 +3,11 @@ class DogsController < ApplicationController
   before_action :set_dog, only:[:show, :destroy, :edit]
 
   def index
-    @dogs = Dog.all
+    if params[:query].present?
+      @dogs = Dog.search_by_size_and_breed(params[:query])
+    else
+      @dogs = Dog.all
+    end
     @markers = @dogs.geocoded.map do |dog|
       {
         lat: dog.latitude,
