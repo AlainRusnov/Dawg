@@ -16,7 +16,11 @@
   <div class="show-content">
     <div class="show-headers">
       <h2><%= @dog.name %></h2>
+      <% if current_user != @dog.user.id %>
         <a href=<%="/dogs/#{@dog.id}/bookings/new"%> class="btn-blue">Book this dog!</a>
+        <% else %>
+        <a href=<%="/dogs/#{@dog.id}/edit"%> class="btn-blue">Edit</a>
+        <% end %>
     </div>
     <div class="show-body">
       <h5><%= @dog.breed %></h5>
@@ -24,12 +28,10 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis erat eu eros ultrices ultrices. Sed eros velit, consectetur at lacus vel, gravida auctor massa. In hac habitasse platea dictumst. Morbi turpis urna, aliquet non eros et, molestie laoreet ante. Integer felis massa, vehicula eget bibendum quis, hendrerit eget enim. In imperdiet ultricies ultricies. Donec dignissim eu neque vel dictum. Nullam eget viverra dui. Vestibulum eleifend condimentum ultrices. Sed laoreet purus id tellus mattis placerat. Maecenas scelerisque ante lacus, in fermentum metus pretium ac. Phasellus laoreet massa neque, sed sodales nisl volutpat at.</p>
   </div>
 
-
-<a href=<%="/dogs/#{@dog.id}/edit"%> class="btn-blue">Edit</a>
 </div>
 
 <%# <% if current_user == @dog.user_id %>
         <%# <a href=<%="/dogs/#{@dog.id}/bookings/new"%>
       <%# <% else %>
-        <%# <a href=<%="/dogs/#{@dog.id}/edit"%>
+        <%#
       <%# <% end %>
