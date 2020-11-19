@@ -16,11 +16,7 @@
   <div class="show-content">
     <div class="show-headers">
       <h2><%= @dog.name %></h2>
-      <% if current_user == @dog.user_id %>
         <a href=<%="/dogs/#{@dog.id}/bookings/new"%> class="btn-blue">Book this dog!</a>
-      <% else %>
-        <a href=<%="/dogs/#{@dog.id}/edit"%> class="btn-blue">Edit</a>
-      <% end %>
     </div>
     <div class="show-body">
       <h5><%= @dog.breed %></h5>
@@ -29,5 +25,11 @@
   </div>
 
 
-<button><%= link_to "Edit dog", edit_dog_path %></button>
+<a href=<%="/dogs/#{@dog.id}/edit"%> class="btn-blue">Edit</a>
 </div>
+
+<%# <% if current_user == @dog.user_id %>
+        <%# <a href=<%="/dogs/#{@dog.id}/bookings/new"%>
+      <%# <% else %>
+        <%# <a href=<%="/dogs/#{@dog.id}/edit"%>
+      <%# <% end %>
