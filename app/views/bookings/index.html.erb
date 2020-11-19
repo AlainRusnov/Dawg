@@ -3,10 +3,13 @@
 
 
 
+
+  <h2 style="text-align: left">Pending Requests</h2>
+
   <h2>Pending Requests</h2>
+
   <div class="container">
       <div class="pending-requests">
-
 
         <div class="request">
           <div class="dog-image ml-5"><h6 style="font-weight: bold; margin: 0 auto"></h6></div>
@@ -20,7 +23,7 @@
           </div>
         </div>
 
-          <div class="request">
+        <div class="request">
           <div class="dog-image ml-5"></div>
           <div class="request-body">
             <div><h5 class="ml-3 mt-3" style="font-weight: bold">alejandroc</h5></div>
@@ -32,10 +35,7 @@
           </div>
         </div>
 
-
-
-
-      <div class="request">
+        <div class="request">
           <div class="dog-image ml-5"></div>
           <div class="request-body">
             <div><h5 class="ml-3 mt-3" style="font-weight: bold">bbarmby24</h5></div>
@@ -58,24 +58,14 @@
             <a href="#" class="btn-blue p-2">Decline</a>
           </div>
       </div>
-
-
-
-
-      </div>
-
-
-
-  <div class="my-dogs">
-
+    </div>
+    <div class="my-dogs">
       <% @dogs.each do |dog| %>
-
         <div class="dog">
           <%= image_tag "dog1-3.jpg"%>
           <h4 class="center mt-2 dog-name"> <%= dog.name %> </h4>
           <h5 class="center dog-breed"> <%= dog.breed %> </h5>
         </div>
-
       <% end %>
   </div>
 

@@ -1,122 +1,148 @@
-.container-devise {
-  display: flex;
-  margin-left: 800px;
-}
+#customformstyle {
 
-.card-devise {
-  border-radius: 8px;
-  width: 430px;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  background-image: asset-url("jazztransparent.png");
-  background-position: 50% 75%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-shadow: 4px 4px 0px #0EFFE2;
-  border: 1px solid  #ced4da;
-}
+ .container-devise {
+    display: flex;
+    margin-left: 800px;
+  }
 
-h2 {
-  color: #FE0CF4;
-  font-family: Coustard;
-  margin-top: 14px;
-  text-align: center;
-  text-decoration: 1px solid black;
-  font-size: 40px;
-  text-shadow: 2px 2px 0px #0EFFE2;
-}
+  .card-devise {
+    border-radius: 8px;
+    width: 430px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    background-image: asset-url("jazztransparent.png");
+    background-position: 50% 75%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 4px 4px 0px #0EFFE2;
+    border: 1px solid  #ced4da;
+  }
 
-#user_email {
-  width: fill;
-  box-shadow: 4px 4px 0px #FE0CF4;
-  margin-left: 8px;
-  margin-right: 14px;
-}
+  h2 {
+    color: #FE0CF4;
+    font-family: Coustard;
+    margin-top: 14px;
+    text-align: center;
+    text-decoration: 1px solid black;
+    font-size: 40px;
+    text-shadow: 2px 2px 0px #0EFFE2;
+  }
 
-#user_password {
-  width: fill;
-  box-shadow: 4px 4px 0px #FE0CF4;
-  margin-left: 8px;
-  margin-right: 14px;
-}
+  #user_email {
+    width: fill;
+    box-shadow: 4px 4px 0px #FE0CF4;
+    margin-left: 8px;
+    margin-right: 14px;
+  }
 
-#booking_description {
-  width: fill;
-  box-shadow: 4px 4px 0px #FE0CF4;
-  margin-left: 8px;
-  margin-right: 14px;
-}
+  #user_password {
+    width: fill;
+    box-shadow: 4px 4px 0px #FE0CF4;
+    margin-left: 8px;
+    margin-right: 14px;
+  }
 
-.text {
-  color: #FE0CF4;
-  font-family: Coustard;
-  font-style: normal;
-  font-size: 24px;
-  font-weight: 900;
-  text-shadow: 2px 2px 0px #0EFFE2;
-  margin-left: 8px;
-}
+  #booking_description {
+    width: fill;
+    height: 120px;
+    box-shadow: 4px 4px 0px #FE0CF4;
+    margin-left: 8px;
+    margin-right: 14px;
+    color: black;
+  }
 
-.email {
-  color: #FE0CF4;
-  font-family: Coustard;
-  font-style: normal;
-  font-size: 24px;
-  font-weight: 900;
-  text-shadow: 2px 2px 0px #0EFFE2;
-  margin-left: 8px;
-}
+  .text {
+    color: #FE0CF4;
+    font-family: Coustard;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 900;
+    text-shadow: 2px 2px 0px #0EFFE2;
+    margin-left: 8px;
+    margin-top: 4px;
+  }
 
-.password {
-  color: #FE0CF4;
-  font-family: Coustard;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 24px;
-  text-shadow: 2px 2px 0px #0EFFE2;
-  margin-left: 8px;
-}
+   .email {
+    color: #FE0CF4;
+    font-family: Coustard;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 900;
+    text-shadow: 2px 2px 0px #0EFFE2;
+    margin-left: 8px;
+  }
 
-.form-check {
-  color: #FE0CF4;
-  font-family: Coustard;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 24px;
-  text-shadow: 2px 2px 0px #0EFFE2;
-  margin-left: 8px;
-}
+  .password {
+    color: #FE0CF4;
+    font-family: Coustard;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    text-shadow: 2px 2px 0px #0EFFE2;
+    margin-left: 8px;
+  }
 
-input.btn {
-  color: #FE0CF4;
-  text-shadow: 1px 1px 0px #0EFFE2;
-  background-color:  #E8F0FE;
-  border: 1px solid #ced4da;
-  font-family: Coustard;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 24px;
-  box-shadow: 4px 4px 0px #FE0CF4;
-  margin-left: 16px;
-  margin-bottom: 8px;
-  border-radius: 6px;
-}
+  .form-check {
+    color: #FE0CF4;
+    font-family: Coustard;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    text-shadow: 2px 2px 0px #0EFFE2;
+    margin-left: 8px;
+  }
 
-.loginlinks {
-  margin-left: 16px;
-  margin-top: 8px;
-  margin-bottom: 4px;
-}
+  input.btn {
+    color: #FE0CF4;
+    text-shadow: 1px 1px 0px #0EFFE2;
+    background-color:  #E8F0FE;
+    border: 1px solid #ced4da;
+    font-family: Coustard;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    box-shadow: 4px 4px 0px #FE0CF4;
+    margin-left: 16px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+  }
 
-.owner-info {
-  margin-left: 16px;
-  margin-top: 8px;
-  margin-bottom: 4px;
-  color: #FE0CF4;
-  font-family: Coustard;
-  font-style: normal;
-  font-size: 16px;
-  font-weight: 900;
-  text-shadow: 2px 2px 0px #0EFFE2;
+  .loginlinks {
+    margin-left: 16px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+
+  // .row {
+  //   display: grid;
+  //   justify-content: center;
+  // }
+  .owner-info {
+    margin-left: 16px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    color: #FE0CF4;
+    font-family: Coustard;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 900;
+    text-shadow: 2px 2px 0px #0EFFE2;
+
+  }
+
+    .doggo-icon {
+      width: 100px;
+      height: 100px;
+      margin-left: 300px;
+      opacity: 0;
+      position: relative;
+    }
+
+    .card-devise:hover > .doggo-icon {
+      opacity: 1;
+    }
+
+
+
 }

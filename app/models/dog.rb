@@ -14,4 +14,5 @@ class Dog < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
   validates :age, presence: true
   validates :size, inclusion: { in: %w[small medium large]}
+  validates :address, presence: true
 end

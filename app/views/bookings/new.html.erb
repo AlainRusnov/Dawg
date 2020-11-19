@@ -2,7 +2,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&display=swap" rel="stylesheet">
 </head>
-
+<div id="customformstyle">
 <div class="banner">
   <%#= image_tag "banner-image.jpg"%>
 
@@ -12,9 +12,6 @@
     <h1>WG</h1>
     <h2>rentals</h2>
   </div>
-
-
-
 
 
 
@@ -41,12 +38,12 @@
     <% end %>
 
     <div class="owner-info">
-    <%= "Dog Owner :" %>
-    <%= @dog.user.name %>
+
+      <%= "Dog Owner : " %><%= @dog.user.name %>
+
     </div>
-    </div>
+    <img src="/assets/frenchieicon.png" alt="DOG PIC" class="doggo-icon">
   </div>
 
-
-
+</div>
 </div>
