@@ -24,10 +24,13 @@
 
 
 
-<%#= simple_form_for (@dog) do |f| %>
-  <%#= f.input :name %>
-  <%#= f.input :breed %>
-  <%#= f.input :description %>
-  <%#= f.input :photo, as: :file, input_html: { class: 'btn-blue' } %>
-  <%#= f.submit input_html: { class: 'btn-blue' } %>
-<%# end %>
+<%= simple_form_for (@dog) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :breed %>
+  <%= f.input :description %>
+  <%= f.input :size %>
+  <%= f.input :age %>
+  <%= f.input :address %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.submit input_html: { class: 'btn-blue' } %>
+<% end %>
