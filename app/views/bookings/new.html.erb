@@ -15,9 +15,6 @@
 
 
 
-
-
-
   <div class="container-devise">
     <div class="card-devise mt-5">
     <h2>Book <%= @dog.name %></h2>
@@ -41,13 +38,12 @@
     <% end %>
 
     <div class="owner-info">
-    <%= "Dog Owner :" %>
-    <%= @dog.user.name %>
+
+      <%= "Dog Owner : " %><%= @dog.user.name %>
+
     </div>
-    </div>
+    <img src="/assets/frenchieicon.png" alt="DOG PIC" class="doggo-icon">
   </div>
+
 </div>
-
-
-
 </div>
