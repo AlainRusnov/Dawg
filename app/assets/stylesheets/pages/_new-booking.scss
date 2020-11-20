@@ -4,6 +4,42 @@
     margin: auto;
   }
 
+  .booking-container{
+  // margin-left: 32px;
+  // margin-right: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.feature-booking-img{
+  height: 316px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 8px 8px #FE0CF4;
+    border: 3px solid #0EFFE2;
+  }
+}
+
+.booking-imgs {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  margin-left: 16px;
+
+  .booking-img {
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      box-shadow: 8px 8px #FE0CF4;
+      border: 3px solid #0EFFE2;
+    }
+  }
+}
   .header {
       color: #FE0CF4;
       font-family: Coustard;
@@ -21,6 +57,15 @@
   .form-control {
      border: 3px dashed #0EFFE2;
 
+  }
+
+  .dog-details, h2, h5, p{
+    color: #FE0CF4;
+    font-family: Coustard;
+    font-style: normal;
+    font-weight: 900;
+    text-align: left;
+    margin-top: 16px;
   }
 
   input[type=text] {
@@ -79,7 +124,6 @@
       font-style: normal;
       font-weight: 900;
       text-shadow: 4px 4px 0px #0EFFE2;
-      text-align: center;
   }
 
   ::placeholder {
