@@ -1,9 +1,11 @@
 <div class="new-booking-container">
   <div class="header"> <h2>BOOK THIS DOG!</h2></div>
   <div class= "container">
-      <%= simple_form_for (@booking) do |f| %>
+      <%= simple_form_for [@dog, @booking] do |f| %>
         <%= f.input :description, label: false, placeholder: "give some details to this dog's human" %>
         <%= f.submit %>
       <% end %>
 
 </div>
+
+
