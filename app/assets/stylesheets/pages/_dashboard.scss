@@ -6,6 +6,12 @@
     margin-bottom: 25px;
   }
 
+  .welcome {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+  }
+
   .center {
     text-align: center;
   }
@@ -17,7 +23,6 @@
   .requests {
     border: 3px dashed $trippy-pink;
     height: 800px;
-    width: 70%;
     margin-right: 10px;
     overflow: scroll;
   }
@@ -25,6 +30,7 @@
   .my-dogs {
     margin-left: 10px;
     margin-bottom: 20px;
+    margin-top: 131px;
     height: 800px;
     overflow: scroll;
   }
@@ -55,13 +61,17 @@
   .dog-name {
     text-decoration: none;
     color: black;
-    margin: 0 auto;
     font-size: 20px;
+    text-align: center;
 
     &:hover {
       color: #FE0CF4;
       text-decoration: none;
     }
+  }
+
+  .dog-info {
+    margin-left: 10px;
   }
 
   .dog-breed {
