@@ -8,6 +8,8 @@
     </div>
   </div>
 
+
+
   <div class="container d-flex">
     <div class="requests">
 
@@ -16,10 +18,15 @@
           <div class="request-pending">
             <div class="d-flex">
               <div class="dog-image ml-5">
-                <h6><%= booking.dog.name %></h6>
+                <% if booking.dog.photos.attached? %>
+                  <%= cl_image_tag booking.dog.photos.key, :class => "dog-image", :crop=>"fit" %>
+                <% else %>
+                <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
+                <% end %>
               </div>
               <div class="request-body">
                 <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+                <div><h6 class="ml-3 mt-3" style="font-weight: bold">Request for: <%= booking.dog.name %></h6></div>
                 <div><p class="ml-3"><%= booking.description %></p></div>
               </div>
             </div>
@@ -39,10 +46,15 @@
           <div class="request-pending">
             <div class="d-flex">
               <div class="dog-image ml-5">
-                <h6><%= booking.dog.name %></h6>
+                <% if booking.dog.photos.attached? %>
+                  <%= cl_image_tag booking.dog.photos[0].key, :class => "dog-image", :crop=>"fit" %>
+                <% else %>
+                  <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
+                <% end %>
               </div>
               <div class="request-body">
                 <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+                <div><h6 class="ml-3 mt-3" style="font-weight: bold">Request for: <%= booking.dog.name %></h6></div>
                 <div><p class="ml-3"><%= booking.description %></p></div>
               </div>
             </div>
@@ -57,10 +69,15 @@
           <div class="request-pending">
             <div class="d-flex">
               <div class="dog-image ml-5">
-                <h6><%= booking.dog.name %></h6>
+                <% if booking.dog.photos.attached? %>
+                  <%= cl_image_tag booking.dog.photos.key, :class => "dog-image", :crop=>"fit" %>
+                <% else %>
+                <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
+                <% end %>
               </div>
               <div class="request-body">
                 <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+                <div><h6 class="ml-3 mt-3" style="font-weight: bold">Request for: <%= booking.dog.name %></h6></div>
                 <div><p class="ml-3"><%= booking.description %></p></div>
               </div>
             </div>
@@ -75,7 +92,11 @@
           <div class="request-pending">
             <div class="d-flex">
               <div class="dog-image ml-5">
-                <h6><%= booking.dog.name %></h6>
+                <% if booking.dog.photos.attached? %>
+                  <%= cl_image_tag booking.dog.photos[0].key, :class => "dog-image" %>
+                <% else %>
+                  <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
+                <% end %>
               </div>
               <div class="request-body">
                 <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>

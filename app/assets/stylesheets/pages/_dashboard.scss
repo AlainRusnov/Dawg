@@ -101,9 +101,14 @@
   .dog-image {
     height: 100px;
     width: 100px;
-    background-color: #0EFFE2;
-    border: 3px dashed #FE0CF4;
     flex-shrink: 0;
+
+    img {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+
+    }
   }
 
   .status-icon {
