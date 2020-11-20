@@ -72,10 +72,7 @@
     <div class="my-dogs">
       <% if current_user.dogs == nil %>
         <h1>hello</h1>
-
       <% else %>
-      <h1>hello there</h1>
-
         <% current_user.dogs.each do |dog| %>
           <div class="dog">
             <%= image_tag "dog1-3.jpg"%>

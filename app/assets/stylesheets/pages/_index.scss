@@ -1,8 +1,9 @@
 // Import page-specific CSS files here.
-@import "home";
-@import "search";
-@import 'mapbox-gl/dist/mapbox-gl';
-@import "new";
-@import "show";
 @import "dashboard";
+@import "home";
+@import "map";
+@import 'mapbox-gl/dist/mapbox-gl';
 @import "new-booking";
+@import "new";
+@import "search";
+@import "show";
