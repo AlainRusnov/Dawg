@@ -1,136 +1,132 @@
-h1  {
-  font-family: 'Helvetica', cursive;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
+.dawg-main {
 
-.center {
-  text-align: center;
-}
+  h1 {
+    font-family: 'Costard';
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 
-.welcome {
-}
+  .center {
+    text-align: center;
+  }
 
-.container {
-  margin: 0;
-}
+  .container {
+    margin: 0;
+  }
 
-.requests {
-  border: 3px dashed $trippy-pink;
-  height: 700px;
-  width: 70%;
-  margin-right: 10px;
-  overflow: scroll;
-}
+  .requests {
+    border: 3px dashed $trippy-pink;
+    height: 800px;
+    width: 70%;
+    margin-right: 10px;
+    overflow: scroll;
+  }
 
-.my-dogs {
-  margin-left: 10px;
-  margin-bottom: 20px;
-  height: 700px;
-  overflow: scroll;
-}
+  .my-dogs {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    height: 800px;
+    overflow: scroll;
+  }
 
-.dog {
-  background-color: white;
-  height: 250px;
-  width: 250px;
-  border-radius: 3px;
-  margin: auto;
-  margin-bottom: 15px;
-  margin-left: 15px;
-  margin-right: 25px;
+  .dog {
+    background-color: white;
+    height: 250px;
+    width: 250px;
+    border-radius: 3px;
+    // margin: auto;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 25px;
 
 
-  background-color: #f4f4f4;
-  box-shadow: 8px 8px #FE0CF4;
-  border: 3px solid #0EFFE2;
+    background-color: #f4f4f4;
+    box-shadow: 8px 8px #FE0CF4;
+    border: 3px solid #0EFFE2;
 
-}
+  }
 
-.dog img {
-  object-fit: cover;
-  height: 170px;
-  width: 100%;
+  .dog img {
+    object-fit: cover;
+    height: 170px;
+    width: 100%;
+  }
 
-.dog a {
-
-}
-
-}
-
-.dog-name {
-  text-decoration: none;
-  color: black;
-  margin: 0 auto;
-  font-size: 20px;
-
-  &:hover {
-    color: #FE0CF4;
+  .dog-name {
     text-decoration: none;
+    color: black;
+    margin: 0 auto;
+    font-size: 20px;
+
+    &:hover {
+      color: #FE0CF4;
+      text-decoration: none;
+    }
+  }
+
+  .dog-breed {
+    font-size: 20px;
+  }
+
+  .request-pending {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    justify-content: space-between;
+  }
+
+  .request-accepted {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    justify-content: space-between;
+  }
+
+  .request-declined {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    justify-content: space-between;
+  }
+
+  .dog-image {
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+
+    img {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+
+    }
+  }
+
+  .status-icon {
+    height: 70px;
+    width: 70px;
+  }
+
+  .icon-holder-accepted {
+    border: 3px dashed #0EFFE2;
+    position: relative;
+    padding: 10px;
+    left: -50px;
+  }
+
+  .icon-holder-declined {
+    border: 3px dashed #FE0CF4;
+    position: relative;
+    padding: 10px;
+    left: -50px;
   }
 }
-
-.dog-breed {
-  font-size: 20px;
-}
-
-.request-pending {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  width: 100%;
-  height: 200px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  justify-content: space-between;
-}
-
-.request-accepted {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  width: 100%;
-  height: 200px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-.request-declined {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  width: 100%;
-  height: 200px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-.dog-image {
-  height: 100px;
-  width: 100px;
-  background-color: #0EFFE2;
-  border: 3px dashed #FE0CF4;
-  flex-shrink: 0;
-}
-
-.fitphoto {
-  max-height: 100px;
-  max-width: 100px;
-}
-
-.status-icon {
-  height: 70px;
-  width: 70px;
-}
-
-.icon-holder-accepted {
-  border: 3px dashed #0EFFE2;
-  position: relative;
-  padding: 10px;
-  left: -50px;
-}
-
-.icon-holder-declined {
-  border: 3px dashed #FE0CF4;
-  position: relative;
-  padding: 10px;
-  left: -50px;
-}
-

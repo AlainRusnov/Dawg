@@ -9,18 +9,24 @@
       <ul class="dog-size list-inline">
         <li>
           <div class="icon-size list-inline">
-          <%= image_tag "smalldog.svg", height: 28, width: 50 %>
+            <%= link_to "/dogs?query=small" do %>
+              <%= image_tag "smalldog.svg", height: 28, width: 50 %>
+            <% end %>
           </div>
         </li>
         <li>
           <div class="icon-size list-inline">
-          <%= image_tag "meddog.svg", height: 55, width: 55%>
+          <%= link_to "/dogs?query=medium" do %>
+            <%= image_tag "meddog.svg", height: 55, width: 55%>
+          <% end %>
           </div>
         </li>
 
         <li>
           <div class="icon-size list-inline">
-          <%= image_tag "bigdog.svg", height: 75, width: 75 %>
+          <%= link_to "/dogs?query=large" do %>
+            <%= image_tag "bigdog.svg", height: 75, width: 75 %>
+          <% end %>
           </div>
         </li>
       </ul>
@@ -35,9 +41,9 @@
       <div class="card">
         <div class="img-search-dog">
             <% if dog.photos.present? %>
-              <%= cl_image_tag dog.photos[0].key, :height=>100, :crop=>"fit" %>
+              <%= cl_image_tag dog.photos[0].key, :height=>150, :width=>180, :crop=>"fill" %>
             <% else %>
-              <%= image_tag "dog-skateboard-how-to-train-guide.jpg", class: "img-dog" %>
+              <%= image_tag "dog-skateboard-how-to-train-guide.jpg", :height=>150, :width=>180 %>
             <% end %>
        <!--   <%= image_tag "dog-skateboard-how-to-train-guide.jpg", class: "img-dog" %> -->
         </div>

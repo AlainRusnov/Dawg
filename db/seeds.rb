@@ -21,6 +21,14 @@ adam = User.create(
   address: "5333 casgrain Montreal Quebec"
 )
 
+kyle = User.create(
+  email: "kyle@email.com",
+  password: "123456",
+  name: "Kyle",
+  address: "5000 casgrain Montreal Quebec"
+)
+
+
 dog_attributes = [
   { address: "5333 Avenue Casgrain, Montreal" },
   { address: "1145 Avenue Lajoie, Outremont" },

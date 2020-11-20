@@ -56,5 +56,8 @@
       <h5><%= @dog.breed %></h5>
       <h5>Age : <%= @dog.age %></h5>
       <p><%= @dog.description %></p>
+
     </div>
+  </div>
+  <a href=<%="/dogs/#{@dog.id}/edit"%> class="btn-blue">Edit</a>
 </div>

@@ -31,9 +31,8 @@
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-    background-image: url('/assets/jazzfade.png');
-    background-position: 20% 80%;
-    background-size: cover;
+    // background-position: 20% 80%;
+    // background-size: cover;
     background-color: white;
     height: 200px;
     width: 100%;
@@ -42,7 +41,6 @@
     border: 3px dashed #0EFFE2;
     // box-shadow: 2px 2px #FE0CF4;
      img {
-      width: 200px;
       height: 100%;
       object-fit: contain;
       border: 3px solid #0EFFE2;

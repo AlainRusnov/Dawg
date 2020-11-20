@@ -1,14 +1,16 @@
-<div class="main">
+<div class="dawg-main">
   <h1>DAWG Dashboard</h1>
   <h2 style="font-family: 'Helvetica', cursive;">Welcome, <%= current_user.name %>!</h2>
 
   <div class="title-container d-flex">
     <div>
-      <h4 style="text-align: left; font-family: 'Fredoka One', cursive">My Requests</h4>
+      <h4 style="text-align: left;">My Requests</h4>
     </div>
   </div>
 
-  <div class="container">
+
+
+  <div class="container d-flex">
     <div class="requests">
 
       <% if current_user.dogs == [] %>
@@ -16,10 +18,15 @@
           <div class="request-pending">
             <div class="d-flex">
               <div class="dog-image ml-5">
-                <h6><%= booking.dog.name %></h6>
+                <% if booking.dog.photos.attached? %>
+                  <%= cl_image_tag booking.dog.photos.key, :class => "dog-image", :crop=>"fit" %>
+                <% else %>
+                <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
+                <% end %>
               </div>
               <div class="request-body">
                 <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+                <div><h6 class="ml-3 mt-3" style="font-weight: bold">Request for: <%= booking.dog.name %></h6></div>
                 <div><p class="ml-3"><%= booking.description %></p></div>
               </div>
             </div>
@@ -29,7 +36,6 @@
               </div>
             </div>
           </div>
-
       <% end %>
 
       <% else %>
@@ -41,18 +47,16 @@
             <div class="d-flex">
               <div class="dog-image ml-5">
 
-<!-- Photos work but divs are messed depending on status and images need to be contained and resized
-       <% if booking.dog.photos.present? %>
-                  <%= cl_image_tag booking.dog.photos[0].key, :height=>96, :crop=>"crop" %>
+                <% if booking.dog.photos.attached? %>
+                  <%= cl_image_tag booking.dog.photos[0].key, :class => "dog-image", :crop=>"fit" %>
                 <% else %>
-                  <%= image_tag "French-Bulldog.jpg", :height=>96, :crop=>"crop" %>
-                <% end %>                                                               -->
+                  <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
+                <% end %>
 
-              </div>
-                <h6><%= booking.dog.name %></h6>
               </div>
               <div class="request-body">
                 <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+                <div><h6 class="ml-3 mt-3" style="font-weight: bold">Request for: <%= booking.dog.name %></h6></div>
                 <div><p class="ml-3"><%= booking.description %></p></div>
               </div>
             </div>
@@ -67,10 +71,15 @@
           <div class="request-pending">
             <div class="d-flex">
               <div class="dog-image ml-5">
-                <h6><%= booking.dog.name %></h6>
+                <% if booking.dog.photos.attached? %>
+                  <%= cl_image_tag booking.dog.photos.key, :class => "dog-image", :crop=>"fit" %>
+                <% else %>
+                <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
+                <% end %>
               </div>
               <div class="request-body">
                 <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+                <div><h6 class="ml-3 mt-3" style="font-weight: bold">Request for: <%= booking.dog.name %></h6></div>
                 <div><p class="ml-3"><%= booking.description %></p></div>
               </div>
             </div>
@@ -85,7 +94,11 @@
           <div class="request-pending">
             <div class="d-flex">
               <div class="dog-image ml-5">
-                <h6><%= booking.dog.name %></h6>
+                <% if booking.dog.photos.attached? %>
+                  <%= cl_image_tag booking.dog.photos[0].key, :class => "dog-image" %>
+                <% else %>
+                  <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
+                <% end %>
               </div>
               <div class="request-body">
                 <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
@@ -101,9 +114,7 @@
       <% end %>
       <% end %>
     </div>
-  </div>
-
-
+  <!-- My DAWGs -->
     <div class="my-dogs">
       <% if current_user.dogs == [] %>
         <% @renter_bookings.where(status: true).each do |booking| %>
@@ -123,5 +134,6 @@
         <% end %>
 
       <% end %>
+  </div>
     </div>
 </div>
