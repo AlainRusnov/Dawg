@@ -3,9 +3,11 @@
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <div class="dawg-logo-icon">
       <%= link_to root_path, class: "boneicon" do %>
-       <img class="logosvg" src='<%= image_path "bone.svg" %>'></img>
+       <img class="logosvg" src='<%= image_path "bone.svg" %>'>
       <% end %>
-      <h1 class="logo-name">DAWG</h1>
+      <%= link_to root_path, class: "logo-name" do %>
+        <h1 class="logo-name">DAWG</h1>
+      <% end %>
     </div>
 
     <div>
@@ -36,6 +38,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Find a dog", dogs_path, class: "nav-link" %>
+          </li>
           <li class="nav-item active">
             <%= link_to "Dashboard", bookings_path, class: "nav-link" %>
           </li>

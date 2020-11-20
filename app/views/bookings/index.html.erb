@@ -46,11 +46,13 @@
           <div class="request-pending">
             <div class="d-flex">
               <div class="dog-image ml-5">
+
                 <% if booking.dog.photos.attached? %>
                   <%= cl_image_tag booking.dog.photos[0].key, :class => "dog-image", :crop=>"fit" %>
                 <% else %>
                   <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
                 <% end %>
+
               </div>
               <div class="request-body">
                 <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
