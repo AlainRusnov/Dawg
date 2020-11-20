@@ -132,7 +132,11 @@
       <% else %>
         <% current_user.dogs.each do |dog| %>
           <div class="dog">
-            <%= image_tag "dog1-3.jpg"%>
+            <% if dog.photos.attached? %>
+              <%= cl_image_tag dog.photos[0].key, :class => "dog-image" %>
+            <% else %>
+              <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
+            <% end %>
             <%= link_to dog.name, dog_path(dog), class: "dog-name" %>
             <h2 class="dog-breed"> <%= dog.breed %> </h2>
           </div>
