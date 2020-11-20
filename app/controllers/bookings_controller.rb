@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   def index
     @owner_bookings = current_user.owner_bookings
     @renter_bookings = current_user.renter_bookings
-    ##
+    @dogs = Dog.all
   end
 
   def new
@@ -53,4 +53,3 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:description) ## user_id/dog_id or user/dog ?
   end
 end
-

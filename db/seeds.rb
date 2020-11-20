@@ -45,6 +45,73 @@ dog_attributes.each do |dog|
     user: adam
   )
 end
+
+
+
+
+
+
+
+
+
+
+
+
+# Bookings testing seeds (lj):
+
+layne = User.create(
+  email: "johnson@dawg.com",
+  password: "123456",
+  name: "Layne",
+  address: "4571 rue de la Roche, Montreal, QC"
+)
+
+renter = User.create(
+  email: "renter@dawg.com",
+  password: "123456",
+  name: "Renter Name",
+  address: "4555 rue de la Roche, Montreal, QC"
+)
+
+dogless = User.create(
+  email: "dogless@dawg.com",
+  password: "123456",
+  name: "Dogless",
+  address: "4666 rue de la Roche, Montreal, QC"
+)
+
+Dog.create(
+    name: "Pickles",
+    breed: "Pug",
+    address: "4571 rue de la Roche, Montreal, QC",
+    age: rand(1..12),
+    size: "small",
+    description: "This little guy is the MAN.",
+    user: layne
+    )
+
+Dog.create(
+    name: "Moose",
+    breed: "Saint Bernard",
+    address: "4571 rue de la Roche, Montreal, QC",
+    age: rand(1..12),
+    size: "large",
+    description: "My big guy.",
+    user: layne
+    )
+
+Dog.create(
+    name: "Geronimo",
+    breed: "German Shepherd",
+    address: "4571 rue de la Roche, Montreal, QC",
+    age: rand(1..12),
+    size: "large",
+    description: "This big guy is the MAN.",
+    user: layne
+    )
+
+
 puts "Done!"
+
 
 

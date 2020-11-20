@@ -15,7 +15,7 @@ h1  {
   margin: 0;
 }
 
-.pending-requests {
+.requests {
   border: 3px dashed $trippy-pink;
   height: 700px;
   width: 70%;
@@ -28,11 +28,6 @@ h1  {
   margin-bottom: 20px;
   height: 700px;
   overflow: scroll;
-  // border: 3px dashed $trippy-pink;
-
-  // background-color: #f4f4f4;
-  // box-shadow: 8px 8px #FE0CF4;
-  // border: 3px solid #0EFFE2;
 }
 
 .dog {
@@ -60,6 +55,7 @@ h1  {
 .dog a {
 
 }
+
 }
 
 .dog-name {
@@ -78,7 +74,26 @@ h1  {
   font-size: 20px;
 }
 
-.request {
+.request-pending {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  justify-content: space-between;
+}
+
+.request-accepted {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.request-declined {
   display: flex;
   align-items: center;
   background-color: white;
@@ -92,4 +107,25 @@ h1  {
   width: 100px;
   background-color: #0EFFE2;
   border: 3px dashed #FE0CF4;
+  flex-shrink: 0;
 }
+
+.status-icon {
+  height: 70px;
+  width: 70px;
+}
+
+.icon-holder-accepted {
+  border: 3px dashed #0EFFE2;
+  position: relative;
+  padding: 10px;
+  left: -50px;
+}
+
+.icon-holder-declined {
+  border: 3px dashed #FE0CF4;
+  position: relative;
+  padding: 10px;
+  left: -50px;
+}
+
