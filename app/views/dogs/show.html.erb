@@ -1,26 +1,42 @@
 
-
 <div class="show-container">
   <div class = "img-container">
-    <div class="feature-img">
-      <% if @dog.photos.attached? %>
-        <%= cl_image_tag @dog.photos[0].key %>
-        <% else %>
-        <%= image_tag "French-Bulldog.jpg" %>
-      <% end %>
+    <div data-aos="zoom-in"
+    data-aos-easing="ease-in-out-back"
+    data-aos-offset="100"
+    data-aos-delay="50"
+    data-aos-duration="1500"
+    data-aos-mirror="true"
+    data-aos-once="false">
+      <div class="feature-img">
+        <% if @dog.photos.attached? %>
+          <%= cl_image_tag @dog.photos[0].key %>
+          <% else %>
+          <%= image_tag "French-Bulldog.jpg" %>
+        <% end %>
+      </div>
     </div>
-    <div class="show-imgs">
-      <% if @dog.photos.attached? %>
-          <% @dog.photos.first(5).drop(1).each do |photo| %>
-            <% if photo.present? %>
-              <div class="show-img"><%= cl_image_tag photo.key, :height=>366, :crop=>"fill" %></div>
-            <% else %>
-              <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
-            <% end %>
+    <div data-aos="zoom-in"
+    data-aos-easing="ease-in-out-back"
+    data-aos-offset="100"
+    data-aos-delay="10"
+    data-aos-duration="1000"
+    data-aos-mirror="true"
+    data-aos-once="false">
+      <div class="show-imgs">
+          <% if @dog.photos.attached? %>
+              <% @dog.photos.first(5).drop(1).each do |photo| %>
+                <% if photo.present? %>
+                  <div class="show-img"><%= cl_image_tag photo.key, :height=>366, :crop=>"fill" %></div>
+                <% else %>
+                  <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
+                <% end %>
+              <% end %>
+          <% else %>
+            <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
           <% end %>
-      <% else %>
-        <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
-      <% end %>
+      </div>
+    </div>
     </div>
   </div>
   <div class="show-content">
@@ -36,5 +52,8 @@
       <h5><%= @dog.breed %></h5>
       <h5>Age : <%= @dog.age %></h5>
       <p><%= @dog.description %></p>
+
+    </div>
+    <a href=<%="/dogs/#{@dog.id}/edit"%> class="btn-blue">Edit</a>
   </div>
 </div>
