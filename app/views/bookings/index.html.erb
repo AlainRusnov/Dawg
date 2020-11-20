@@ -40,6 +40,15 @@
           <div class="request-pending">
             <div class="d-flex">
               <div class="dog-image ml-5">
+
+<!-- Photos work but divs are messed depending on status and images need to be contained and resized
+       <% if booking.dog.photos.present? %>
+                  <%= cl_image_tag booking.dog.photos[0].key, :height=>96, :crop=>"crop" %>
+                <% else %>
+                  <%= image_tag "French-Bulldog.jpg", :height=>96, :crop=>"crop" %>
+                <% end %>                                                               -->
+
+              </div>
                 <h6><%= booking.dog.name %></h6>
               </div>
               <div class="request-body">

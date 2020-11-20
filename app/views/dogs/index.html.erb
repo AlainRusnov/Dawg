@@ -34,7 +34,12 @@
 
       <div class="card">
         <div class="img-search-dog">
-          <%= image_tag "dog-skateboard-how-to-train-guide.jpg", class: "img-dog" %>
+            <% if dog.photos.present? %>
+              <%= cl_image_tag dog.photos[0].key, :height=>100, :crop=>"fit" %>
+            <% else %>
+              <%= image_tag "dog-skateboard-how-to-train-guide.jpg", class: "img-dog" %>
+            <% end %>
+       <!--   <%= image_tag "dog-skateboard-how-to-train-guide.jpg", class: "img-dog" %> -->
         </div>
         <div class="dog-info">
           <div class="center-v">

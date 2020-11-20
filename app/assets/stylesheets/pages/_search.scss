@@ -31,8 +31,11 @@
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
+    background-image: url('/assets/jazzfade.png');
+    background-position: 20% 80%;
+    background-size: cover;
     background-color: white;
-    height: 180px;
+    height: 200px;
     width: 100%;
     margin-bottom: 16px;
     margin-right: 8px;
@@ -41,7 +44,7 @@
      img {
       width: 200px;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       border: 3px solid #0EFFE2;
       box-shadow: 8px 8px #FE0CF4;
 
@@ -51,13 +54,13 @@
     h1 {
       font-family: Coustard;
       color: #FE0CF4;
-      font-weight: 900;
+      font-weight: 1000;
       margin: 8px;
     }
 
     h2 {
       color: #0EFFE2;
-      font-weight: 900;
+      font-weight: 1000;
       margin-left: 8px;
     }
 
