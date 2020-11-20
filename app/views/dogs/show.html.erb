@@ -4,7 +4,7 @@
   <div class = "img-container">
     <div class="feature-img">
       <% if @dog.photos.attached? %>
-        <%= cl_image_tag @dog.photos[0].key %>
+        <%= cl_image_tag @dog.photos[0].key, :height=>200, :width=>300, :crop=>"fill" %>
         <% else %>
         <%= image_tag "French-Bulldog.jpg" %>
       <% end %>
