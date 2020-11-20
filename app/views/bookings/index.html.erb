@@ -4,12 +4,36 @@
 
   <div class="title-container d-flex">
     <div>
-      <h4 style="text-align: left; font-family: 'Fredoka One', cursive">Pending Requests</h4>
+      <h4 style="text-align: left; font-family: 'Fredoka One', cursive">My Requests</h4>
     </div>
   </div>
 
   <div class="container">
-    <div class="pending-requests">
+    <div class="requests">
+
+      <% if current_user.dogs == [] %>
+       <% @renter_bookings.where(status: true).each do |booking| %>
+          <div class="request-pending">
+            <div class="d-flex">
+              <div class="dog-image ml-5">
+                <h6><%= booking.dog.name %></h6>
+              </div>
+              <div class="request-body">
+                <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+                <div><p class="ml-3"><%= booking.description %></p></div>
+              </div>
+            </div>
+            <div class="d-flex p-5">
+              <div class="icon-holder-accepted">
+                <%= image_tag "noun_accept_856695.png", class: "status-icon"%>
+              </div>
+            </div>
+          </div>
+
+      <% end %>
+
+      <% else %>
+
       <% @owner_bookings.each do |booking| %>
         <% if booking.status == true %>
 <!-- accepted -->
@@ -66,12 +90,20 @@
           </div>
         <% end %>
       <% end %>
-      </div>
+      <% end %>
     </div>
+  </div>
+
 
     <div class="my-dogs">
-      <% if current_user.dogs == nil %>
-        <h1>hello</h1>
+      <% if current_user.dogs == [] %>
+        <% @renter_bookings.where(status: true).each do |booking| %>
+          <div class="dog">
+            <%= image_tag "dog1-3.jpg"%>
+            <h2><%= booking.dog.name %></h2>
+            <h2 class="dog-breed"> <%= booking.dog.breed %> </h2>
+          </div>
+     <% end %>
       <% else %>
         <% current_user.dogs.each do |dog| %>
           <div class="dog">
