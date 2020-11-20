@@ -13,7 +13,7 @@
       <% if @dog.photos.attached? %>
           <% @dog.photos.first(5).drop(1).each do |photo| %>
             <% if photo.present? %>
-              <div class="show-img"><%= cl_image_tag photo.key, :height=>366, :crop=>"fill" %></div>
+              <div class="show-img"><%= cl_image_tag photo.key, :height=>160, :width=>300, :crop=>"fill" %></div>
             <% else %>
               <div class="show-img"><%= image_tag "French-Bulldog.jpg" %></div>
             <% end %>
