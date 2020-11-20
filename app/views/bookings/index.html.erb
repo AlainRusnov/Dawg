@@ -1,14 +1,14 @@
-<div class="main">
+<div class="dawg-main">
   <h1>DAWG Dashboard</h1>
   <h2 style="font-family: 'Helvetica', cursive;">Welcome, <%= current_user.name %>!</h2>
 
   <div class="title-container d-flex">
     <div>
-      <h4 style="text-align: left; font-family: 'Fredoka One', cursive">My Requests</h4>
+      <h4 style="text-align: left;">My Requests</h4>
     </div>
   </div>
 
-  <div class="container">
+  <div class="container d-flex">
     <div class="requests">
 
       <% if current_user.dogs == [] %>
@@ -29,7 +29,6 @@
               </div>
             </div>
           </div>
-
       <% end %>
 
       <% else %>
@@ -92,9 +91,7 @@
       <% end %>
       <% end %>
     </div>
-  </div>
-
-
+  <!-- My DAWGs -->
     <div class="my-dogs">
       <% if current_user.dogs == [] %>
         <% @renter_bookings.where(status: true).each do |booking| %>
@@ -114,5 +111,6 @@
         <% end %>
 
       <% end %>
+  </div>
     </div>
 </div>
