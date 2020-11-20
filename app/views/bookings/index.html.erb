@@ -6,119 +6,68 @@
     <div>
       <h4 style="text-align: left; font-family: 'Fredoka One', cursive">Pending Requests</h4>
     </div>
-    <div>
- <!--      <h4 style="font-family: 'Fredoka One', cursive;">My DAWGs</h4> -->
-    </div>
   </div>
+
   <div class="container">
-
-    <div class="requests">
     <div class="pending-requests">
-
       <% @owner_bookings.each do |booking| %>
-      <% if booking.status == true %>
-        <!-- accepted -->
-          <% @owner_bookings.each do |booking| %>
-            <div class="request-pending">
-              <div class="d-flex">
-                <div class="dog-image ml-5">
-                  <h6><%= booking.dog.name %></h6>
-                </div>
-                <div class="request-body">
-                  <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
-                  <div><p class="ml-3"><%= booking.description %></p></div>
-                </div>
+        <% if booking.status == true %>
+<!-- accepted -->
+          <div class="request-pending">
+            <div class="d-flex">
+              <div class="dog-image ml-5">
+                <h6><%= booking.dog.name %></h6>
               </div>
-              <div class="d-flex p-5">
-                <div class="icon-holder-accepted">
-                  <%= image_tag "noun_accept_856695.png", class: "status-icon"%>
-                </div>
+              <div class="request-body">
+                <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+                <div><p class="ml-3"><%= booking.description %></p></div>
               </div>
-            </div>
-          <% end %>
-
-      <% elsif booking.status == false %>
-          <!-- declined -->
-
-      <% @owner_bookings.each do |booking| %>
-        <div class="request-pending">
-          <div class="d-flex">
-            <div class="dog-image ml-5">
-              <h6><%= booking.dog.name %></h6>
-            </div>
-            <div class="request-body">
-              <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
-              <div><p class="ml-3"><%= booking.description %></p></div>
-            </div>
-          </div>
-          <div class="d-flex p-5">
-            <div class="icon-holder-declined">
-              <%= image_tag "noun_reject_856692.png", class: "status-icon"%>
-            </div>
-          </div>
-        </div>
-      <% end %>
-
-      <% else %>
-      <% @owner_bookings.each do |booking| %>
-        <div class="request-pending">
-          <div class="d-flex">
-            <div class="dog-image ml-5">
-              <h6><%= booking.dog.name %></h6>
-            </div>
-            <div class="request-body">
-              <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
-              <div><p class="ml-3"><%= booking.description %></p></div>
             </div>
             <div class="d-flex p-5">
-          <%= link_to "Accept", booking_accept_path(booking), method: :patch, class: "btn-blue mr-3" %>
-          <%= link_to "Decline", booking_reject_path(booking), method: :patch, class: "btn-blue mr-3" %>
+              <div class="icon-holder-accepted">
+                <%= image_tag "noun_accept_856695.png", class: "status-icon"%>
+              </div>
+            </div>
+          </div>
+<!-- declined -->
+
+        <% elsif booking.status == false %>
+          <div class="request-pending">
+            <div class="d-flex">
+              <div class="dog-image ml-5">
+                <h6><%= booking.dog.name %></h6>
+              </div>
+              <div class="request-body">
+                <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+                <div><p class="ml-3"><%= booking.description %></p></div>
+              </div>
+            </div>
+            <div class="d-flex p-5">
+              <div class="icon-holder-declined">
+                <%= image_tag "noun_reject_856692.png", class: "status-icon"%>
+              </div>
+            </div>
+          </div>
+<!-- pending -->
+        <% else %>
+          <div class="request-pending">
+            <div class="d-flex">
+              <div class="dog-image ml-5">
+                <h6><%= booking.dog.name %></h6>
+              </div>
+              <div class="request-body">
+                <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
+                <div><p class="ml-3"><%= booking.description %></p></div>
+              </div>
+              <div class="d-flex p-5">
+                <%= link_to "Accept", booking_accept_path(booking), method: :patch, class: "btn-blue mr-3" %>
+                <%= link_to "Decline", booking_reject_path(booking), method: :patch, class: "btn-blue mr-3" %>
+              </div>
+            </div>
+          </div>
         <% end %>
       <% end %>
-
-<!--     <div class="pending-requests">
-      <% @owner_bookings.each do |booking| %>
-        <div class="request">
-        <div class="dog-image ml-5">
-          <h6><%= booking.dog.name %></h6>
-        </div>
-        <div class="request-body">
-          <div><h5 class="ml-3 mt-3" style="font-weight: bold"><%= booking.user.name %></h5></div>
-          <div><p class="ml-3">Farmer's market and the park.</p></div>
-        </div>
-        <div class="d-flex p-5">
-          <%= link_to "Accept", booking_accept_path(booking), method: :patch, class: "btn-blue mr-3" %>
-          <%= link_to "Decline", booking_reject_path(booking), method: :patch, class: "btn-blue mr-3" %>
-
-    </div>
-  </div> -->
-<!--         <div class="request">
-          <div class="dog-image ml-5"></div>
-          <div class="request-body">
-            <div><h5 class="ml-3 mt-3" style="font-weight: bold">alejandroc</h5></div>
-            <div><p class="ml-3">Does Lola like music?</p></div>
-
-          </div>
-          <div class="d-flex p-5">
-            <!-- <a href="#" id="accept" class="btn-blue mr-3">Accept</a> -->
-            <%= link_to "Accept", booking_accept_path(booking), method: :patch, class: "btn-blue mr-3" %>
-            <!-- <a href="#" id="decline" class="btn-blue p-2">Decline</a> -->
-            <%= link_to "Decline", booking_reject_path(booking), method: :patch, class: "btn-blue mr-3" %>
-          </div>
-        </div>
-<% end %>
-  <% end %>
-
-
-
-
-
-
-
-
-
       </div>
-
     </div>
 
     <div class="my-dogs">
@@ -132,5 +81,5 @@
     </div>
 </div>
 
-</div>
+
 
