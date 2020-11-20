@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   def index
     @owner_bookings = current_user.owner_bookings
     @renter_bookings = current_user.renter_bookings
-    ##
+    @dogs = Dog.all
   end
 
   def new
