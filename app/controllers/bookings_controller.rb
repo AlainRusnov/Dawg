@@ -3,6 +3,19 @@ class BookingsController < ApplicationController
 
   def index
     @owner_bookings = current_user.owner_bookings
+    # @owner_bookings_pending = []
+    # @owner_bookings_accepted = []
+    # @owner_bookings_declined = []
+    # owner_bookings.each do |booking|
+    #   case booking.status
+    #   when nil
+    #     @owner_bookings_pending << booking
+    #   when true
+    #     @owner_bookings_accepted << booking
+    #   when false
+    #     @owner_bookings_declined << booking
+    #   end
+    # end
     @renter_bookings = current_user.renter_bookings
     @dogs = Dog.all
   end
